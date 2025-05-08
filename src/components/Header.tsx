@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { NavLink, Link } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
-
+import logoSHEI from '../components/logoSHEI1.png'; // Adjust the path if needed
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -37,7 +37,7 @@ const Header: React.FC = () => {
       <div className="container mx-auto px-4 flex justify-between items-center">
         <Link to="/" className="z-10 flex items-center space-x-2">
           {/* Logo Image (Optional) */}
-          <img src="src\components\logoSHEI1.png" alt="Logo" className="h-8 w-auto" />
+          <img src={logoSHEI} alt="Logo" className="h-8 w-auto" />
 
           {/* Company Name - hidden on mobile */}
           <span className="hidden md:inline text-xl font-bold text-[#009fd1] leading-tight tracking-wide font-sans">
