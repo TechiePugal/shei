@@ -11,7 +11,7 @@ const AboutPage: React.FC = () => {
     <>
       <SEO 
         title="About SHEI – Trusted Metal Casting & Engineering Partner in India"
-        description="Discover Sudharasan Heavy Engineering's journey as a top-tier manufacturer of HPDC, CNC machining, and alloy castings in India. Founded by visionary technocrat A. Thankavel."
+        description="Discover Sudharshan Heavy Engineering's journey as a top-tier manufacturer of HPDC, CNC machining, and alloy castings in India. Founded by visionary technocrat A. Thankavel."
         keywords="engineering company in Coimbatore, metal casting manufacturers India, R&D-based die casting company"
       />
       
@@ -33,7 +33,7 @@ const AboutPage: React.FC = () => {
             >
               <h2 className="text-3xl md:text-4xl font-bold mb-6 text-primary-950">Our Story</h2>
               <p className="text-neutral-700 mb-6 text-justify">
-                Sudharasan Heavy Engineering Industry (SHEI) was established with a clear vision — to deliver top-quality metal casting and machining solutions for India's growing industrial sectors. As a proud part of the SUPER Group of Companies, we bring together deep industry knowledge, automation capabilities, and precision engineering to meet global manufacturing standards.
+                Sudharshan Heavy Engineering Industry (SHEI) was established with a clear vision — to deliver top-quality metal casting and machining solutions for India's growing industrial sectors. As a proud part of the SUPER Group of Companies, we bring together deep industry knowledge, automation capabilities, and precision engineering to meet global manufacturing standards.
               </p>
               <p className="text-neutral-700 mb-6 text-justify">
                 Founded by Mr. A. Thankavel, an innovative technocrat with a passion for solving complex engineering challenges, SHEI has grown from a small workshop to a state-of-the-art manufacturing facility with comprehensive capabilities in die casting, CNC machining, and sheet metal fabrication.

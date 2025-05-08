@@ -41,7 +41,7 @@ const Header: React.FC = () => {
 
           {/* Company Name - hidden on mobile */}
           <span className="hidden md:inline text-xl font-bold text-[#009fd1] leading-tight tracking-wide font-sans">
-            SUDHARASAN HEAVY ENGINEERING INDUSTRY
+          SUDHARSHAN HEAVY ENGINEERING INDUSTRY
           </span>
         </Link>
 

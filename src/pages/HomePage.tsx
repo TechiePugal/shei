@@ -21,7 +21,7 @@ const HomePage: React.FC = () => {
   return (
     <>
       <SEO 
-        title="Die Casting & CNC Machining Experts in India | Sudharasan Heavy Engineering"
+        title="Die Casting & CNC Machining Experts in India | Sudharshan Heavy Engineering"
         description="Leading die casting manufacturer in Coimbatore. SHEI specializes in aluminum, magnesium, and zinc alloy casting, CNC machining, and fabrication for automotive, textile & industrial sectors."
         keywords="die casting manufacturer in India, CNC machining Coimbatore, aluminum casting supplier"
       />
@@ -179,7 +179,7 @@ const HomePage: React.FC = () => {
             />
             
             <TestimonialCard 
-              quote="The engineering team at Sudharasan Heavy Engineering helped us optimize our component design for better manufacturability while maintaining strict performance requirements."
+              quote="The engineering team at Sudharshan Heavy Engineering helped us optimize our component design for better manufacturability while maintaining strict performance requirements."
               name="Vijay Sharma"
               position="Chief Engineer"
               company="AutoParts Industries"

@@ -12,7 +12,7 @@ const Logo: React.FC = () => {
 
 <div>
   <div className="text-xl font-bold text-[#009fd1] leading-tight tracking-wide font-sans">
-    SUDHARASAN HEAVY <br /> ENGINEERING INDUSTRY
+  SUDHARSHAN HEAVY <br /> ENGINEERING INDUSTRY
   </div>
 </div>
 
