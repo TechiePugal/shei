@@ -36,34 +36,57 @@ const ContactPage: React.FC = () => {
                 </p>
                 
                 <div className="space-y-6">
+                  {/* Office Address */}
                   <div className="flex items-start">
                     <div className="w-12 h-12 bg-primary-100 rounded-full flex items-center justify-center flex-shrink-0">
                       <MapPin className="h-6 w-6 text-primary-600" />
                     </div>
                     <div className="ml-4">
-                      <h3 className="text-lg font-semibold mb-1">Visit Us</h3>
+                      <h3 className="text-lg font-semibold mb-1">Office Address</h3>
                       <p className="text-neutral-600">
-                        123 Industrial Estate<br />
-                        Coimbatore, Tamil Nadu<br />
-                        India - 641049
+                        Sudharsan Heavy Engineering Industry<br />
+                        100/A, Athipalayam Road, Chinnavedempatti<br />
+                        Coimbatore - 641006
                       </p>
                     </div>
                   </div>
-                  
+
+                  {/* Factory Address */}
+                  <div className="flex items-start">
+                    <div className="w-12 h-12 bg-primary-100 rounded-full flex items-center justify-center flex-shrink-0">
+                      <MapPin className="h-6 w-6 text-primary-600" />
+                    </div>
+                    <div className="ml-4">
+                      <h3 className="text-lg font-semibold mb-1">Factory Address</h3>
+                      <p className="text-neutral-600">
+                        S.F.No: 581/1, Athipalayam Road<br />
+                        Chinnavedempatti, Coimbatore - 641049
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Phone Numbers */}
                   <div className="flex items-start">
                     <div className="w-12 h-12 bg-primary-100 rounded-full flex items-center justify-center flex-shrink-0">
                       <Phone className="h-6 w-6 text-primary-600" />
                     </div>
                     <div className="ml-4">
-                      <h3 className="text-lg font-semibold mb-1">Call Us</h3>
-                      <p className="text-neutral-600">
-                        <a href="tel:+919876543210" className="hover:text-primary-600 transition-colors">
-                          +91 98765 43210
+                      <h3 className="text-lg font-semibold mb-1">Phone Numbers</h3>
+                      <p className="text-neutral-600 space-y-1">
+                        <a href="tel:+919942909631" className="block hover:text-primary-600 transition-colors">
+                          +91 99429 09631
+                        </a>
+                        <a href="tel:+919942909632" className="block hover:text-primary-600 transition-colors">
+                          +91 99429 09632
+                        </a>
+                        <a href="tel:+918248278107" className="block hover:text-primary-600 transition-colors">
+                          +91 82482 78107
                         </a>
                       </p>
                     </div>
                   </div>
-                  
+
+                  {/* Email */}
                   <div className="flex items-start">
                     <div className="w-12 h-12 bg-primary-100 rounded-full flex items-center justify-center flex-shrink-0">
                       <Mail className="h-6 w-6 text-primary-600" />
@@ -71,13 +94,14 @@ const ContactPage: React.FC = () => {
                     <div className="ml-4">
                       <h3 className="text-lg font-semibold mb-1">Email Us</h3>
                       <p className="text-neutral-600">
-                        <a href="mailto:info@shei.com" className="hover:text-primary-600 transition-colors">
-                          info@shei.com
+                        <a href="mailto:mailboxshei@gmail.com" className="hover:text-primary-600 transition-colors">
+                          mailboxshei@gmail.com
                         </a>
                       </p>
                     </div>
                   </div>
-                  
+
+                  {/* Business Hours */}
                   <div className="flex items-start">
                     <div className="w-12 h-12 bg-primary-100 rounded-full flex items-center justify-center flex-shrink-0">
                       <Clock className="h-6 w-6 text-primary-600" />
