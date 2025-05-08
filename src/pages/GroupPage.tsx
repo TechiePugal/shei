@@ -253,8 +253,8 @@ const GroupPage: React.FC = () => {
                   className="w-full h-full object-cover"
                 />
               </div>
-              <h3 className="text-xl font-semibold mb-1">Priya Thankavel</h3>
-              <p className="text-secondary-600 mb-3">Managing Director</p>
+              <h3 className="text-xl font-semibold mb-1">T.S. Sundaram</h3>
+              <p className="text-secondary-600 mb-3">Joint Managing Director</p>
               <p className="text-neutral-600 mb-4">
                 Strategic leader with expertise in operations management and business development.
               </p>
