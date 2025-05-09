@@ -17,8 +17,8 @@ const HomePage: React.FC = () => {
   return (
     <>
       <SEO 
-        title="Top Die Casting & CNC Machining Company in India | Sudharshan HEI"
-        description="Sudharshan Heavy Engineering Industry is a leading die casting and CNC machining company in Coimbatore, India. Experts in aluminum, magnesium, and zinc casting, precision machining, and industrial fabrication."
+        title="Top Die Casting & CNC Machining Company in India | Sudharsan HEI"
+        description="Sudharsan Heavy Engineering Industry is a leading die casting and CNC machining company in Coimbatore, India. Experts in aluminum, magnesium, and zinc casting, precision machining, and industrial fabrication."
         keywords="die casting India, CNC machining Coimbatore, aluminum casting company, magnesium casting, industrial fabrication India"
       />
 

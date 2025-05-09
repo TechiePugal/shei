@@ -46,7 +46,7 @@ const GroupPage: React.FC = () => {
             >
               <h2 className="text-3xl md:text-4xl font-bold mb-6 text-primary-950">Group Overview</h2>
               <p className="text-neutral-700 mb-6">
-                Sudharshan Heavy Engineering Industry operates under the umbrella of the SUPER Group of Companies — a multi-industry enterprise known for its high-precision manufacturing across diverse industry sectors.
+                Sudharsan Heavy Engineering Industry operates under the umbrella of the SUPER Group of Companies — a multi-industry enterprise known for its high-precision manufacturing across diverse industry sectors.
               </p>
               <p className="text-neutral-700 mb-6">
                 Founded with a vision to create an integrated manufacturing ecosystem, the SUPER Group has strategically expanded its capabilities across complementary industries, enabling us to offer end-to-end solutions to our clients.

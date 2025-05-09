@@ -35,7 +35,7 @@ const Header: React.FC = () => {
         <Link to="/" className="z-10 flex items-center space-x-2">
           <img src={logoSHEI} alt="Logo" className="h-8 w-auto" />
           <span className="hidden md:inline text-xl font-bold text-[#009fd1] leading-tight tracking-wide font-sans">
-            SUDHARSHAN HEAVY ENGINEERING INDUSTRY
+            SUDHARSAN HEAVY ENGINEERING INDUSTRY
           </span>
         </Link>
 

@@ -10,7 +10,7 @@ const ContactPage: React.FC = () => {
     <>
       <SEO 
         title="Contact SHEI | Die Casting & Engineering Solutions in Coimbatore"
-        description="Get in touch with Sudharshan Heavy Engineering Industry for die casting, CNC machining, and engineering solutions. Located in Coimbatore, Tamil Nadu."
+        description="Get in touch with Sudharsan Heavy Engineering Industry for die casting, CNC machining, and engineering solutions. Located in Coimbatore, Tamil Nadu."
         keywords="contact SHEI, die casting manufacturer contact, engineering company Coimbatore"
       />
       

@@ -149,7 +149,7 @@ const Footer: React.FC = () => {
         <hr className="border-neutral-800 my-8" />
         
         <div className="flex flex-col md:flex-row justify-between items-center text-neutral-400 text-sm">
-          <p>&copy; {new Date().getFullYear()} Sudharshan Heavy Engineering Industry. All Rights Reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Sudharsan Heavy Engineering Industry. All Rights Reserved.</p>
           <div className="mt-4 md:mt-0">
             <a href="/about" className="hover:text-white mr-4">Privacy Policy</a>
             <a href="/about" className="hover:text-white">Terms of Service</a>
