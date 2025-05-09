@@ -103,15 +103,15 @@ const Header: React.FC = () => {
 
         {/* Mobile Menu Button */}
         <div className="md:hidden relative z-50">
-          <button
+        <button
             onClick={toggleMenu}
             className="p-2 focus:outline-none"
             aria-label="Toggle menu"
           >
             {isMenuOpen ? (
-              <X className="w-7 h-7 text-neutral-900" />
+              <X className="w-8 h-8 text-[#009fd1]" />  
             ) : (
-              <Menu className="w-7 h-7 text-neutral-900" />
+              <Menu className="w-8 h-8 text-[#009fd1]" /> 
             )}
           </button>
 
