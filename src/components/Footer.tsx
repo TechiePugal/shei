@@ -138,8 +138,8 @@ const Footer: React.FC = () => {
               </li>
               <li className="flex">
                 <Mail className="text-secondary-500 mr-3 flex-shrink-0" />
-                <a href="mailto:info@shei.com" className="text-neutral-300 hover:text-white transition-colors">
-                  info@shei.com
+                <a href="mailto:mailboxshei@gmail.com" className="text-neutral-300 hover:text-white transition-colors">
+                mailboxshei@gmail.com
                 </a>
               </li>
             </ul>
