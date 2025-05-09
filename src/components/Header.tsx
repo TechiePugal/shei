@@ -39,7 +39,7 @@ const Header: React.FC = () => {
 
 
     <div className="flex flex-col">
-    <span className="text-[12px] sm:text-sm md:text-base lg:text-lg xl:text-xl font-semibold text-[#009fd1] tracking-wide font-sans">
+    <span className="text-[12px] sm:text-sm md:text-base lg:text-lg xl:text-xl font-black text-[#009fd1] tracking-wide font-sans">
   SUDHARSAN HEAVY ENGINEERING INDUSTRY
 </span>
 
