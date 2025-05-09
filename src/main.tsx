@@ -6,6 +6,7 @@ import App from './App';
 import './index.css';
 import React from 'react';
 
+
 // Preloading the fonts for faster rendering
 const PreloadFonts = () => (
   <>
@@ -28,9 +29,9 @@ createRoot(document.getElementById('root')!).render(
     <HelmetProvider>
       <PreloadFonts />
       <BrowserRouter>
-        {/* <Suspense fallback={<div>Loading...</div>}> */}
+        <Suspense fallback={<div>Loading...</div>}>
           <LazyApp />
-        {/* </Suspense> */}
+        </Suspense>
       </BrowserRouter>
     </HelmetProvider>
   </StrictMode>
