@@ -30,7 +30,7 @@ const GroupPage: React.FC = () => {
       <Hero 
         title="The SUPER Group –<br />Building India's Industrial<br />Backbone"
         subtitle="A multi-industry enterprise known for its high-precision manufacturing across sectors."
-        backgroundImage="https://images.pexels.com/photos/9436715/pexels-photo-9436715.jpeg"
+        backgroundImage="https://png.pngtree.com/thumb_back/fh260/background/20240604/pngtree-cnc-machine-working-with-workpiece-on-smart-factory-image_15739298.jpg"
       />
       
       {/* Group Overview */}
