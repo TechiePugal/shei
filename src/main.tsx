@@ -1,13 +1,14 @@
-import { StrictMode, Suspense } from 'react';
+import { StrictMode, useEffect, useState, Suspense } from 'react';
 import { createRoot } from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
-import App from './App';
-import './index.css';
 import React from 'react';
-import Loader from './components/Loader'; // Import the loader
+import Loader from './components/Loader';
+import './index.css';
 
-// Preloading the fonts for faster rendering
+const LazyApp = React.lazy(() => import('./App'));
+
+// Preloading fonts
 const PreloadFonts = () => (
   <>
     <link 
@@ -22,16 +23,30 @@ const PreloadFonts = () => (
   </>
 );
 
-const LazyApp = React.lazy(() => import('./App'));
+// Timed loader wrapper
+const TimedApp = () => {
+  const [showLoader, setShowLoader] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowLoader(false);
+    }, 2000); // 3 seconds
+    return () => clearTimeout(timer);
+  }, []);
+
+  return showLoader ? <Loader /> : (
+    <Suspense fallback={<Loader />}>
+      <LazyApp />
+    </Suspense>
+  );
+};
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <HelmetProvider>
       <PreloadFonts />
       <BrowserRouter>
-        <Suspense fallback={<Loader />}>
-          <LazyApp />
-        </Suspense>
+        <TimedApp />
       </BrowserRouter>
     </HelmetProvider>
   </StrictMode>
