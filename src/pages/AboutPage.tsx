@@ -5,7 +5,7 @@ import SEO from '../components/SEO';
 import Hero from '../components/Hero';
 import SectionTitle from '../components/SectionTitle';
 import CallToAction from '../components/CallToAction';
-
+import logoSHEI from '../pages/about.png'; // Adjust the path if needed
 const AboutPage: React.FC = () => {
   return (
     <>
@@ -50,8 +50,9 @@ const AboutPage: React.FC = () => {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="rounded-lg overflow-hidden shadow-xl"
             >
+              {/* <img src={logoSHEI} alt="Logo" className="h-8 w-auto" /> */}
               <img 
-                src="https://shei.co.in/images/about.webp" 
+                src={logoSHEI}
                 alt="SHEI Facility" 
                 className="w-full h-full object-cover"
               />
