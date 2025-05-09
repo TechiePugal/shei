@@ -39,9 +39,10 @@ const Header: React.FC = () => {
 
 
     <div className="flex flex-col">
-      <span className="text-[10px] sm:text-xs md:text-sm lg:text-base font-black text-[#009fd1] tracking-wide font-sans">
-        SUDHARSAN HEAVY ENGINEERING INDUSTRY
-      </span>
+    <span className="text-[10px] sm:text-xs md:text-sm lg:text-[14px] xl:text-[16px] font-black text-[#009fd1] tracking-wide font-sans">
+  SUDHARSAN HEAVY ENGINEERING INDUSTRY
+</span>
+
       <span
   className={`text-[8px] sm:text-[10px] md:text-sm tracking-wide font-sans transition-colors duration-300 ${
     scrolled ? 'text-gray-1000' : 'text-gray-200'
