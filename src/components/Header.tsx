@@ -87,9 +87,9 @@ const Header: React.FC = () => {
             aria-label="Toggle menu"
           >
             {isMenuOpen ? (
-              <X className="w-7 h-7 text-neutral-900" strokeWidth={3.5}/>
+              <X className="w-6 h-6 text-neutral-900" />
             ) : (
-              <Menu className="w-7 h-7 text-[#009fd3]" strokeWidth={3.5}/>
+              <Menu className="w-6 h-6 text-neutral-900" />
             )}
           </button>
 
