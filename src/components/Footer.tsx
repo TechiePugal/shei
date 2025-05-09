@@ -151,8 +151,8 @@ const Footer: React.FC = () => {
         <div className="flex flex-col md:flex-row justify-between items-center text-neutral-400 text-sm">
           <p>&copy; {new Date().getFullYear()} Sudharshan Heavy Engineering Industry. All Rights Reserved.</p>
           <div className="mt-4 md:mt-0">
-            <a href="/privacy-policy" className="hover:text-white mr-4">Privacy Policy</a>
-            <a href="/terms-of-service" className="hover:text-white">Terms of Service</a>
+            <a href="/about" className="hover:text-white mr-4">Privacy Policy</a>
+            <a href="/about" className="hover:text-white">Terms of Service</a>
           </div>
         </div>
       </div>
