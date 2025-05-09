@@ -5,6 +5,7 @@ import { HelmetProvider } from 'react-helmet-async';
 import App from './App';
 import './index.css';
 import React from 'react';
+import Loader from './components/Loader'; // Import the loader
 
 // Preloading the fonts for faster rendering
 const PreloadFonts = () => (
@@ -28,7 +29,7 @@ createRoot(document.getElementById('root')!).render(
     <HelmetProvider>
       <PreloadFonts />
       <BrowserRouter>
-        <Suspense fallback={<div>Loading...</div>}>
+        <Suspense fallback={<Loader />}>
           <LazyApp />
         </Suspense>
       </BrowserRouter>
