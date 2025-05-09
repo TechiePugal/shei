@@ -42,7 +42,7 @@ const Header: React.FC = () => {
       <span className="text-[10px] sm:text-xs md:text-sm lg:text-base font-semibold text-[#009fd1] tracking-wide font-sans">
         SUDHARSAN HEAVY ENGINEERING INDUSTRY
       </span>
-      <span className="text-[6px] sm:text-[8px] md:text-xs text-gray-500 tracking-wide font-sans">
+      <span className="text-[6px] sm:text-[8px] md:text-sm text-gray-300 tracking-wide font-sans">
         Super Group of Companies - Coimbatore
       </span>
     </div>
