@@ -37,7 +37,7 @@ const Hero: React.FC<HeroProps> = ({
           <div className="text-white">
             {/* Remove animation on H1 to speed up LCP */}
             <h1
-              className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6"
+              className="text-2xl md:text-33xl lg:text-4xl font-bold mb-6"
               dangerouslySetInnerHTML={{ __html: title }}
             />
 
