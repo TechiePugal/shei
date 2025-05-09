@@ -27,7 +27,7 @@ const HomePage: React.FC = () => {
 />
 
       <Hero 
-        title="India's Leading High-Precision<br />Die Casting & Engineering<br />Solutions Provider"
+        title="India's Leading High-Precision Die Casting & Engineering Solutions Provider"
         subtitle="Delivering excellence in aluminum and magnesium castings, CNC machined components, and custom engineering solutions in Coimbatore, Tamil Nadu."
         backgroundImage="https://images.pexels.com/photos/3822843/pexels-photo-3822843.jpeg"
         showFeatures={true}

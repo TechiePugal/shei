@@ -15,7 +15,7 @@ const ContactPage: React.FC = () => {
       />
       
       <Hero 
-        title="Get in Touch with Our<br />Engineering Experts"
+        title="Get in Touch with Our Engineering Experts"
         subtitle="We're here to help you with your manufacturing and engineering needs."
         backgroundImage="https://images.pexels.com/photos/1181354/pexels-photo-1181354.jpeg"
       />

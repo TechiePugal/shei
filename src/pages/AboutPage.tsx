@@ -16,7 +16,7 @@ const AboutPage: React.FC = () => {
       />
       
       <Hero 
-        title="Pioneering Innovation in Metal<br />Casting and Engineering<br />Since Inception"
+        title="Pioneering Innovation in Metal Casting and Engineering Since Inception"
         subtitle="Learn about our journey, mission, and commitment to engineering excellence."
         backgroundImage="https://www.supergroupscbe.com/images/super-groups-about.jpg"
       />

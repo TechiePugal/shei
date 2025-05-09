@@ -100,7 +100,7 @@ const ProductsPage: React.FC = () => {
       />
       
       <Hero 
-        title="Engineered Components Built for<br />Performance & Reliability"
+        title="Engineered Components Built for Performance & Reliability"
         subtitle="Discover our diverse range of precision-engineered products manufactured using advanced die casting and CNC technologies."
         backgroundImage="https://images.pexels.com/photos/1108101/pexels-photo-1108101.jpeg"
       />
