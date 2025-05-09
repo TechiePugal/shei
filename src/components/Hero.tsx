@@ -28,17 +28,20 @@ const Hero: React.FC<HeroProps> = ({
         }}
       />
 
+      {/* Preload background image */}
+      <link rel="preload" as="image" href={backgroundImage} />
+
       <div className="container relative z-10 py-20">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+          {/* Hero Content */}
           <div className="text-white">
-            <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
+            {/* Optimized H1: no animation to improve LCP */}
+            <h1
               className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6"
               dangerouslySetInnerHTML={{ __html: title }}
             />
 
+            {/* Subtitle animation preserved */}
             {subtitle && (
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
@@ -50,6 +53,7 @@ const Hero: React.FC<HeroProps> = ({
               </motion.p>
             )}
 
+            {/* CTA Buttons */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -60,12 +64,16 @@ const Hero: React.FC<HeroProps> = ({
                 Explore Products
                 <ChevronRight className="ml-2 h-5 w-5" />
               </Link>
-              <Link to="/contact" className="btn btn-outline text-white border-white hover:bg-white hover:text-primary-950">
+              <Link
+                to="/contact"
+                className="btn btn-outline text-white border-white hover:bg-white hover:text-primary-950"
+              >
                 Contact Us
               </Link>
             </motion.div>
           </div>
 
+          {/* Optional Feature Card */}
           {showFeatures && (
             <motion.div
               initial={{ opacity: 0, x: 20 }}
