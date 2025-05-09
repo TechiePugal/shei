@@ -20,12 +20,12 @@ import StatCard from '../components/StatCard';
 const HomePage: React.FC = () => {
   return (
     <>
-      <SEO 
-        title="Die Casting & CNC Machining Experts in India | Sudharshan Heavy Engineering"
-        description="Leading die casting manufacturer in Coimbatore. SHEI specializes in aluminum, magnesium, and zinc alloy casting, CNC machining, and fabrication for automotive, textile & industrial sectors."
-        keywords="die casting manufacturer in India, CNC machining Coimbatore, aluminum casting supplier"
-      />
-      
+<SEO 
+  title="Top Die Casting & CNC Machining Company in India | Sudharshan HEI"
+  description="Sudharshan Heavy Engineering Industry is a leading die casting and CNC machining company in Coimbatore, India. Experts in aluminum, magnesium, and zinc casting, precision machining, and industrial fabrication."
+  keywords="die casting India, CNC machining Coimbatore, aluminum casting company, magnesium casting, industrial fabrication India"
+/>
+
       <Hero 
         title="India's Leading High-Precision<br />Die Casting & Engineering<br />Solutions Provider"
         subtitle="Delivering excellence in aluminum and magnesium castings, CNC machined components, and custom engineering solutions in Coimbatore, Tamil Nadu."
