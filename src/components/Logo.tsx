@@ -1,5 +1,5 @@
 import React from 'react';
-import logoSHEI from '../components/logoSHEI1.png'; // Adjust the path if needed
+import logoSHEI from '../components/logo.png'; // Adjust the path if needed
 
 const Logo: React.FC = () => {
   return (

@@ -11,7 +11,7 @@ import {
   ArrowRight
 } from 'lucide-react';
 // import Logo from './Logo';
-import logoSHEI from '../components/logoSHEI1.png'; // Adjust the path if needed
+import logoSHEI from '../components/logo.png'; // Adjust the path if needed
 const Footer: React.FC = () => {
   return (
     <footer className="bg-primary-950 text-white pt-16 pb-8">

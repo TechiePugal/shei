@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { NavLink, Link } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
-import logoSHEI from '../components/logoSHEI1.png'; // Adjust the path if needed
+import logoSHEI from '../components/logo.png'; // Adjust the path if needed
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
