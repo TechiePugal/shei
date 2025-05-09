@@ -30,7 +30,7 @@ const TimedApp = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowLoader(false);
-    }, 2000); // 3 seconds
+    }, 1000); // 3 seconds
     return () => clearTimeout(timer);
   }, []);
 
