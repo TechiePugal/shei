@@ -18,6 +18,9 @@ const Hero: React.FC<HeroProps> = ({
 }) => {
   return (
     <section className="relative min-h-screen flex items-center pt-20">
+      {/* Preload background image to improve LCP */}
+      <link rel="preload" as="image" href={backgroundImage} />
+
       {/* Background Image */}
       <div
         className="absolute inset-0 z-0"
@@ -28,20 +31,17 @@ const Hero: React.FC<HeroProps> = ({
         }}
       />
 
-      {/* Preload background image */}
-      <link rel="preload" as="image" href={backgroundImage} />
-
       <div className="container relative z-10 py-20">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           {/* Hero Content */}
           <div className="text-white">
-            {/* Optimized H1: no animation to improve LCP */}
+            {/* Remove animation on H1 to speed up LCP */}
             <h1
               className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6"
               dangerouslySetInnerHTML={{ __html: title }}
             />
 
-            {/* Subtitle animation preserved */}
+            {/* Subtitle animation retained as it's not part of LCP */}
             {subtitle && (
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
