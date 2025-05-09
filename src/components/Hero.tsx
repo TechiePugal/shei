@@ -2,26 +2,37 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { ChevronRight, CheckCircle2 } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 
 interface HeroProps {
   title: string;
   subtitle?: string;
   backgroundImage: string;
   showFeatures?: boolean;
+  seoTitle?: string;
+  seoDescription?: string;
 }
 
 const Hero: React.FC<HeroProps> = ({ 
   title, 
   subtitle, 
   backgroundImage,
-  showFeatures = false 
+  showFeatures = false,
+  seoTitle = 'SHEI – Die Casting & CNC Machining Experts in Coimbatore',
+  seoDescription = 'Offering high-quality aluminum casting, CNC machining, and sheet metal fabrication services across India.'
 }) => {
   return (
     <section className="relative min-h-screen flex items-center pt-20">
-      {/* Preload background image to improve LCP */}
+      {/* React Helmet for SEO Meta Tags */}
+      <Helmet>
+        <title>{seoTitle}</title>
+        <meta name="description" content={seoDescription} />
+      </Helmet>
+
+      {/* Preload background image */}
       <link rel="preload" as="image" href={backgroundImage} />
 
-      {/* Background Image */}
+      {/* Background Image Layer */}
       <div
         className="absolute inset-0 z-0"
         style={{
@@ -31,17 +42,15 @@ const Hero: React.FC<HeroProps> = ({
         }}
       />
 
+      {/* Main Content */}
       <div className="container relative z-10 py-20">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-          {/* Hero Content */}
           <div className="text-white">
-            {/* Remove animation on H1 to speed up LCP */}
-            <h1
-              className="text-2xl md:text-3xl lg:text-4xl font-bold mb-6"
-              dangerouslySetInnerHTML={{ __html: title }}
-            />
+            {/* H1 for SEO */}
+            <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-6">
+              {title}
+            </h1>
 
-            {/* Subtitle animation retained as it's not part of LCP */}
             {subtitle && (
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
@@ -73,7 +82,7 @@ const Hero: React.FC<HeroProps> = ({
             </motion.div>
           </div>
 
-          {/* Optional Feature Card */}
+          {/* Optional Features Panel */}
           {showFeatures && (
             <motion.div
               initial={{ opacity: 0, x: 20 }}
