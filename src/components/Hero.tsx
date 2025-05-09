@@ -37,7 +37,7 @@ const Hero: React.FC<HeroProps> = ({
           <div className="text-white">
             {/* Remove animation on H1 to speed up LCP */}
             <h1
-              className="text-2xl md:text-33xl lg:text-4xl font-bold mb-6"
+              className="text-2xl md:text-3xl lg:text-4xl font-bold mb-6"
               dangerouslySetInnerHTML={{ __html: title }}
             />
 
@@ -47,7 +47,7 @@ const Hero: React.FC<HeroProps> = ({
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.2 }}
-                className="text-xl text-neutral-200 mb-8"
+                className="text-l text-neutral-200 mb-8"
               >
                 {subtitle}
               </motion.p>
