@@ -1,12 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import { motion } from 'framer-motion';
-import { Filter } from 'lucide-react';
+import { ref, onValue } from 'firebase/database';
+import { database } from '../firebase';
 import SEO from '../components/SEO';
 import Hero from '../components/Hero';
 import SectionTitle from '../components/SectionTitle';
 import ProductCard from '../components/ProductCard';
-import { ref, onValue } from 'firebase/database';
-import { database } from '../firebase';
 
 interface Product {
   id: string;
@@ -19,6 +17,7 @@ interface Product {
 
 const ProductsPage: React.FC = () => {
   const [products, setProducts] = useState<Product[]>([]);
+  const [selectedCategory, setSelectedCategory] = useState<string>('All');
 
   useEffect(() => {
     const productsRef = ref(database, 'products');
@@ -37,6 +36,12 @@ const ProductsPage: React.FC = () => {
 
     return () => unsubscribe();
   }, []);
+
+  const categories = ['All', ...Array.from(new Set(products.map(p => p.category)))];
+
+  const filteredProducts = selectedCategory === 'All'
+    ? products
+    : products.filter(product => product.category === selectedCategory);
 
   return (
     <>
@@ -59,10 +64,33 @@ const ProductsPage: React.FC = () => {
             subtitle="Browse our comprehensive portfolio of precision-engineered components for various industries."
           />
 
-          <div className="p-8">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {products.length > 0 ? (
-                products.map((product, index) => (
+          {/* Chip-style Category Filter */}
+{/* Chip-style Category Filter with Mobile Scroll */}
+<div className="mt-8 mb-12 overflow-x-auto">
+  <div className="flex gap-3 px-4 sm:justify-center whitespace-nowrap w-max sm:w-auto">
+    {categories.map((category) => (
+      <button
+        key={category}
+        onClick={() => setSelectedCategory(category)}
+        className={`px-4 py-2 rounded-full border transition-all duration-300 shrink-0
+          ${
+            selectedCategory === category
+              ? 'bg-blue-600 text-white border-blue-600 shadow-md'
+              : 'bg-white text-gray-700 border-gray-300 hover:bg-blue-50'
+          }`}
+      >
+        {category}
+      </button>
+    ))}
+  </div>
+</div>
+
+
+          {/* Product Grid */}
+          <div className="p-4 sm:p-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+              {filteredProducts.length > 0 ? (
+                filteredProducts.map((product, index) => (
                   <ProductCard
                     key={product.id}
                     image={product.image}
@@ -74,7 +102,7 @@ const ProductsPage: React.FC = () => {
                   />
                 ))
               ) : (
-                <p>No products available.</p>
+                <p className="text-center text-gray-500 col-span-full">No products available in this category.</p>
               )}
             </div>
           </div>
