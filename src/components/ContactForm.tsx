@@ -150,11 +150,11 @@ const ContactForm: React.FC = () => {
           />
         </div>
 
-        <div className="md:col-span-2">
+        {/* <div className="md:col-span-2">
           <label htmlFor="status" className="block text-sm font-medium text-neutral-700 mb-1">
             Status *
           </label>
-          {/* <select
+          <select
             id="status"
             name="status"
             required
@@ -165,8 +165,8 @@ const ContactForm: React.FC = () => {
             <option value="incomplete">Incomplete</option>
             <option value="complete">Complete</option>
             <option value="not responding">Not Responding</option>
-          </select> */}
-        </div>
+          </select>
+        </div> */}
       </div>
 
       <div className="mt-6">
