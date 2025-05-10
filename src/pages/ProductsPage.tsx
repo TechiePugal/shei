@@ -116,7 +116,7 @@ const ProductsPage: React.FC = () => {
           {/* Category Filter */}
           <div className="flex items-center mb-8 overflow-x-auto pb-4">
             <Filter className="h-5 w-5 text-neutral-500 mr-3" />
-            <span className="text-neutral-700 mr-4 font-medium">Filter by:</span>
+            {/* <span className="text-neutral-700 mr-4 font-medium">Filter by:</span> */}
             
             <div className="flex space-x-2">
               {categories.map(category => (
