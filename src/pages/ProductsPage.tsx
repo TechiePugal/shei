@@ -71,7 +71,7 @@ const products = [
     title: 'Façade Fittings',
     category: 'architectural',
     image: 'https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg',
-    description: 'Custom aluminum façade fittings for modern architectural applications, combining aesthetics with structural strength.',
+    description: 'Custom aluminum facade fittings for modern architectural applications, combining aesthetics with structural strength.',
     link: '/contact',
   },
   {
