@@ -9,6 +9,7 @@ interface FormData {
   phone: string;
   company: string;
   message: string;
+  status: string; // New field for status
 }
 
 const ContactForm: React.FC = () => {
@@ -17,13 +18,14 @@ const ContactForm: React.FC = () => {
     email: '',
     phone: '',
     company: '',
-    message: ''
+    message: '',
+    status: 'incomplete', // Default status
   });
-  
+
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'success' | 'error' | null>(null);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
@@ -48,7 +50,8 @@ const ContactForm: React.FC = () => {
         email: '',
         phone: '',
         company: '',
-        message: ''
+        message: '',
+        status: 'incomplete', // Reset to 'incomplete' after submission
       });
       setSubmitStatus('success');
     } catch (error) {
@@ -145,6 +148,24 @@ const ContactForm: React.FC = () => {
             className="w-full px-4 py-2 border border-neutral-300 rounded-md focus:ring-2 focus:ring-primary-500 focus:border-transparent"
             placeholder="Please describe your requirements..."
           />
+        </div>
+
+        <div className="md:col-span-2">
+          <label htmlFor="status" className="block text-sm font-medium text-neutral-700 mb-1">
+            Status *
+          </label>
+          <select
+            id="status"
+            name="status"
+            required
+            value={formData.status}
+            onChange={handleChange}
+            className="w-full px-4 py-2 border border-neutral-300 rounded-md focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+          >
+            <option value="incomplete">Incomplete</option>
+            <option value="complete">Complete</option>
+            <option value="not responding">Not Responding</option>
+          </select>
         </div>
       </div>
 
