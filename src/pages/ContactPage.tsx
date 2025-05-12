@@ -4,6 +4,7 @@ import { MapPin, Phone, Mail, Clock } from 'lucide-react';
 import SEO from '../components/SEO';
 import Hero from '../components/Hero';
 import ContactForm from '../components/ContactForm';
+import FeedbackForm from '../components/FeedbackForm';
 
 const ContactPage: React.FC = () => {
   return (
@@ -179,6 +180,11 @@ const ContactPage: React.FC = () => {
 
         </div>
       </section>
+      <section className="py-20 bg-white">
+  <div className="container">
+    <FeedbackForm />
+  </div>
+</section>
     </>
   );
 };
