@@ -13,8 +13,15 @@ const FeedbackForm: React.FC = () => {
 
     if (!quote || !name || !company) return;
 
+    const feedbackData = {
+      quote,
+      name,
+      company,
+      status: 'Not Publish', // Default status is 'Not Publish'
+    };
+
     try {
-      await push(ref(database, 'feedbacks'), { quote, name, company });
+      await push(ref(database, 'feedbacks'), feedbackData);
       setSuccess(true);
       setQuote('');
       setName('');
