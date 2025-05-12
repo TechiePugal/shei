@@ -54,7 +54,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
         <div className="text-xs uppercase text-gray-500 tracking-wider mb-1">
           {category}
         </div>
-        <h3 className="text-lg font-semibold text-gray-800 mb-2">{title}</h3>
+        <h3 className="text-sm font-semibold text-gray-800 mb-1">{title}</h3>
         <p className="text-sm text-gray-600 leading-relaxed">
           {displayDescription}
           {isLong && (
