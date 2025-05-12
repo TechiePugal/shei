@@ -148,9 +148,9 @@ const ContactPage: React.FC = () => {
             </p>
           </motion.div>
           
-<div className="flex w-full gap-12">
+<div className="flex flex-col md:flex-row w-full gap-12">
   {/* Head Office */}
-  <div className="w-1/2 rounded-lg overflow-hidden shadow-lg">
+  <div className="w-full md:w-1/2 rounded-lg overflow-hidden shadow-lg">
     <h2 className="text-center text-xl font-semibold mb-4">Head Office</h2>
     <iframe
       src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d31326.079044839957!2d76.982782!3d11.056621!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba85875f5da5219%3A0xf0d8694e6c43d621!2sSUPER%20MACHINE%20WORKS%20(P)%20LTD!5e0!3m2!1sen!2sin!4v1714193586373!5m2!1sen!2sin"
@@ -163,7 +163,7 @@ const ContactPage: React.FC = () => {
   </div>
 
   {/* Factory */}
-  <div className="w-1/2 rounded-lg overflow-hidden shadow-lg">
+  <div className="w-full md:w-1/2 rounded-lg overflow-hidden shadow-lg">
     <h2 className="text-center text-xl font-semibold mb-4">Factory</h2>
     <iframe
       src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d41390.93808299245!2d76.99051202603763!3d11.083542323806503!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba8f7c7714c088d%3A0x21795fb9232cb7c8!2s3XJM%2B28J%2C%20Ramani&#39;s%20Sri%20Mayuri%20Layout%2C%20Saravanampatti%2C%20Coimbatore%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1747040410608!5m2!1sen!2sin"
