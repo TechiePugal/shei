@@ -1,19 +1,53 @@
-import React, { Suspense } from 'react';
+import React, { useEffect, useState, Suspense } from 'react';
 import { Wrench, FactoryIcon, Settings, Layers, Users, GlobeIcon, BarChart3, Award } from 'lucide-react';
 import SEO from '../components/SEO';
 import Hero from '../components/Hero';
 import SectionTitle from '../components/SectionTitle';
 import ServiceCard from '../components/ServiceCard';
 import CallToAction from '../components/CallToAction';
-import TestimonialCard from '../components/TestimonialCard';
 import StatCard from '../components/StatCard';
+import { database, ref, onValue } from '../firebase'; // Import Firebase functions
+import TestimonialCard from '../components/TestimonialCard';
 
-// Lazy load sections
-const LazyServiceCard = React.lazy(() => import('../components/ServiceCard'));
-const LazyTestimonialCard = React.lazy(() => import('../components/TestimonialCard'));
-const LazyStatCard = React.lazy(() => import('../components/StatCard'));
+// Define the feedback type with 'id' and 'status' (and any other necessary fields)
+type Feedback = {
+  id: string;
+  status: string;
+  quote: string;
+  name: string;
+  company: string;
+  position?: string;
+};
 
 const HomePage: React.FC = () => {
+  const [feedbacks, setFeedbacks] = useState<Feedback[]>([]); // Use the Feedback type here
+
+useEffect(() => {
+  const feedbackRef = ref(database, 'feedbacks'); // Firebase path for feedbacks
+
+  // Fetch feedback data from Firebase
+  onValue(feedbackRef, (snapshot) => {
+    const data = snapshot.val();
+    
+    // Map the data and filter out null values
+    const feedbackArray: Feedback[] = data
+      ? Object.entries(data).map(([id, val]) => {
+          if (val && typeof val === 'object') {
+            return { id, ...val } as Feedback; // Cast to Feedback type
+          }
+          return null; // Return null for invalid feedback
+        }).filter((feedback): feedback is Feedback => feedback !== null) // Type guard to filter null values
+      : [];
+
+    const publishedFeedbacks = feedbackArray.filter(
+      (feedback) => feedback.status === 'Publish'
+    );
+
+    setFeedbacks(publishedFeedbacks.reverse()); // latest first
+  });
+}, []);
+
+
   return (
     <>
       <SEO 
@@ -39,28 +73,28 @@ const HomePage: React.FC = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <Suspense fallback={<div>Loading...</div>}>
-              <LazyServiceCard 
+              <ServiceCard 
                 icon={<FactoryIcon size={32} />}
                 title="High Pressure Die Casting"
                 description="Precision HPDC components with tight tolerances and excellent surface finish for automotive and industrial applications."
                 link="/products"
                 delay={0.1}
               />
-              <LazyServiceCard 
+              <ServiceCard 
                 icon={<Wrench size={32} />}
                 title="CNC / VMC / HMC Machining"
                 description="Advanced multi-axis machining capabilities for complex components with precision and repeatability."
                 link="/products"
                 delay={0.2}
               />
-              <LazyServiceCard 
+              <ServiceCard 
                 icon={<Layers size={32} />}
                 title="Sheet Metal Fabrication"
                 description="Custom sheet metal components with cutting, bending, welding, and assembly services for various industries."
                 link="/products"
                 delay={0.3}
               />
-              <LazyServiceCard 
+              <ServiceCard 
                 icon={<Settings size={32} />}
                 title="Tooling & Surface Finishing"
                 description="In-house tool design and fabrication along with comprehensive surface treatment solutions."
@@ -72,8 +106,7 @@ const HomePage: React.FC = () => {
         </div>
       </section>
 
-      {/* Industries We Serve */}
-      <section className="py-20 bg-primary-950 text-white text-justify">
+            <section className="py-20 bg-primary-950 text-white text-justify">
         <div className="container">
           <SectionTitle 
             title="Industries We Serve"
@@ -98,46 +131,8 @@ const HomePage: React.FC = () => {
         </div>
       </section>
 
-      {/* Stats Section */}
-      <section className="py-20 bg-white text-justify">
-        <div className="container">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
-            <Suspense fallback={<div>Loading Stats...</div>}>
-              <LazyStatCard 
-                icon={<Award size={32} />}
-                value={20}
-                label="Years of Experience"
-                suffix="+"
-                delay={0.1}
-              />
-              <LazyStatCard 
-                icon={<Users size={32} />}
-                value={100}
-                label="Team Members"
-                suffix="+"
-                delay={0.2}
-              />
-              <LazyStatCard 
-                icon={<BarChart3 size={32} />}
-                value={500}
-                label="Projects Completed"
-                suffix="+"
-                delay={0.3}
-              />
-              <LazyStatCard 
-                icon={<GlobeIcon size={32} />}
-                value={15}
-                label="Countries Served"
-                suffix="+"
-                delay={0.4}
-              />
-            </Suspense>
-          </div>
-        </div>
-      </section>
-
-      {/* Testimonials */}
-      <section className="py-20 bg-neutral-50 text-justify">
+      {/* Testimonials Section */}
+      <section className="py-20 bg-neutral-50 text-justify bg-gray-200 ">
         <div className="container">
           <SectionTitle 
             title="What Our Clients Say"
@@ -145,13 +140,58 @@ const HomePage: React.FC = () => {
           />
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <Suspense fallback={<div>Loading Testimonials...</div>}>
-              {[
-                { quote: "SHEI has been our trusted supplier for precision die cast components for over 5 years.", name: "Rajesh Kumar", company: "Textile Machines Ltd." },
-                { quote: "The engineering team helped us optimize our component design for better manufacturability.", name: "Vijay Sharma", company: "AutoParts Industries" },
-                { quote: "Their commitment to quality and continuous improvement made them our go-to partner.", name: "Arun Patel", company: "Oil Systems International" }
-              ].map((testimonial, index) => (
-                <LazyTestimonialCard position={''} key={index} {...testimonial} delay={0.1 + index * 0.1} />
-              ))}
+              {feedbacks.length > 0 ? (
+                feedbacks.map((feedback, index) => (
+                  <TestimonialCard 
+                    key={feedback.id} 
+                    quote={feedback.quote}
+                    name={feedback.name}
+                    company={feedback.company}
+                    delay={0.1 + index * 0.1} 
+                    position={feedback.position || ''} 
+                  />
+                ))
+              ) : (
+                <p className="text-lg text-neutral-500">No testimonials available at the moment.</p>
+              )}
+            </Suspense>
+          </div>
+        </div>
+      </section>
+
+      {/* Stats Section */}
+      <section className="py-20 bg-white text-justify">
+        <div className="container">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+            <Suspense fallback={<div>Loading Stats...</div>}>
+              <StatCard 
+                icon={<Award size={32} />}
+                value={20}
+                label="Years of Experience"
+                suffix="+" 
+                delay={0.1}
+              />
+              <StatCard 
+                icon={<Users size={32} />}
+                value={100}
+                label="Team Members"
+                suffix="+" 
+                delay={0.2}
+              />
+              <StatCard 
+                icon={<BarChart3 size={32} />}
+                value={500}
+                label="Projects Completed"
+                suffix="+" 
+                delay={0.3}
+              />
+              <StatCard 
+                icon={<GlobeIcon size={32} />}
+                value={15}
+                label="Countries Served"
+                suffix="+" 
+                delay={0.4}
+              />
             </Suspense>
           </div>
         </div>
@@ -172,3 +212,5 @@ const HomePage: React.FC = () => {
 };
 
 export default HomePage;
+
+

@@ -23,7 +23,7 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay: delay }}
-      className="bg-white rounded-lg shadow-md p-6 relative"
+      className="bg-white rounded-lg shadow-md p-6 relative "
     >
       <div className="absolute top-6 left-6 text-secondary-200">
         <Quote size={48} />
