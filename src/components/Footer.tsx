@@ -34,10 +34,10 @@ const Footer: React.FC = () => {
               <a href="https://facebook.com" className="text-neutral-400 hover:text-white transition-colors" aria-label="Facebook">
                 <Facebook size={20} />
               </a>
-              <a href="https://instagram.com" className="text-neutral-400 hover:text-white transition-colors" aria-label="Instagram">
+              <a href="https://www.instagram.com/super_group_of_companies/" className="text-neutral-400 hover:text-white transition-colors" aria-label="Instagram">
                 <Instagram size={20} />
               </a>
-              <a href="https://linkedin.com" className="text-neutral-400 hover:text-white transition-colors" aria-label="LinkedIn">
+              <a href="https://www.linkedin.com/company/supergroupscbe/" className="text-neutral-400 hover:text-white transition-colors" aria-label="LinkedIn">
                 <Linkedin size={20} />
               </a>
               <a href="https://youtube.com" className="text-neutral-400 hover:text-white transition-colors" aria-label="YouTube">

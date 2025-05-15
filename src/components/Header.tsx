@@ -31,6 +31,7 @@ const Header: React.FC = () => {
 <div className="container mx-auto px-4 flex justify-between items-center relative">
   {/* Left Side: Logo and Title */}
   <Link to="/" className="z-10 flex items-center space-x-2">
+  
   <img
     src={logoSHEI}
     alt="Logo"
