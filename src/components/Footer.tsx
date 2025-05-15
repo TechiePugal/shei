@@ -31,7 +31,7 @@ const Footer: React.FC = () => {
               Leading die casting manufacturer in Coimbatore specializing in aluminum, magnesium, and zinc alloy casting, CNC machining, and fabrication.
             </p>
             <div className="flex space-x-4">
-              <a href="https://facebook.com" className="text-neutral-400 hover:text-white transition-colors" aria-label="Facebook">
+              <a href="https://www.facebook.com/profile.php?id=61576335147558" className="text-neutral-400 hover:text-white transition-colors" aria-label="Facebook">
                 <Facebook size={20} />
               </a>
               <a href="https://www.instagram.com/super_group_of_companies/" className="text-neutral-400 hover:text-white transition-colors" aria-label="Instagram">
@@ -40,7 +40,7 @@ const Footer: React.FC = () => {
               <a href="https://www.linkedin.com/company/supergroupscbe/" className="text-neutral-400 hover:text-white transition-colors" aria-label="LinkedIn">
                 <Linkedin size={20} />
               </a>
-              <a href="https://youtube.com" className="text-neutral-400 hover:text-white transition-colors" aria-label="YouTube">
+              <a href="https://www.youtube.com/@SuperGroupscbe" className="text-neutral-400 hover:text-white transition-colors" aria-label="YouTube">
                 <Youtube size={20} />
               </a>
             </div>
