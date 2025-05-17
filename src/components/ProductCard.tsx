@@ -32,7 +32,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay }}
-      className="group rounded-2xl shadow-md overflow-hidden bg-white transition-transform hover:scale-[1.015]"
+      className="group rounded-2xl shadow-md overflow-hidden bg-gray-100 transition-transform hover:scale-[1.015]"
     >
       <div className="relative">
         <img
@@ -54,7 +54,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
         <div className="text-xs uppercase text-gray-500 tracking-wider mb-1">
           {category}
         </div>
-        <h3 className="text-sm font-semibold text-gray-800 mb-1">{title}</h3>
+        <h3 className="text-sm font-semibold text-gray-700 mb-1">{title}</h3>  {/* Changed to gray-700 */}
         <p className="text-sm text-gray-600 leading-relaxed">
           {displayDescription}
           {isLong && (

@@ -28,7 +28,7 @@ const Footer: React.FC = () => {
 /></div>
             </div>
             <p className="text-neutral-300 mb-4 text-justify">
-              Leading die casting manufacturer in Coimbatore specializing in aluminum, magnesium, and zinc alloy casting, CNC machining, and fabrication.
+              Leading die casting manufacturer in Coimbatore specializing in Aluminum, Magnesium, and Zinc alloy casting, CNC machining, and Fabrication.
             </p>
             <div className="flex space-x-4">
               <a href="https://www.facebook.com/profile.php?id=61576335147558" className="text-neutral-400 hover:text-white transition-colors" aria-label="Facebook">
@@ -72,6 +72,12 @@ const Footer: React.FC = () => {
                 <Link to="/products" className="text-neutral-300 hover:text-white transition-colors flex items-center">
                   <ArrowRight size={16} className="mr-2" />
                   Products
+                </Link>
+              </li>
+               <li>
+                <Link to="/FactoryTour" className="text-neutral-300 hover:text-white transition-colors flex items-center">
+                  <ArrowRight size={16} className="mr-2" />
+                  Factory Tour
                 </Link>
               </li>
               <li>

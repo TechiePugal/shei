@@ -18,8 +18,13 @@ const ContactPage: React.FC = () => {
       <Hero 
         title="Get in Touch with Our Engineering Experts"
         subtitle="We're here to help you with your manufacturing and engineering needs."
-        backgroundImage="https://images.pexels.com/photos/1181354/pexels-photo-1181354.jpeg"
+        backgroundImages={[
+    
+    "https://images.pexels.com/photos/1181354/pexels-photo-1181354.jpeg"
+  ]}
+  // showFeatures={true}
       />
+      
       
       <section className="py-20">
         <div className="container">

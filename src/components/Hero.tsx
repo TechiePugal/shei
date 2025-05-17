@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { ChevronRight, CheckCircle2 } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -7,49 +7,56 @@ import { Helmet } from 'react-helmet';
 interface HeroProps {
   title: string;
   subtitle?: string;
-  backgroundImage: string;
+  backgroundImages: string[]; // support for multiple images
   showFeatures?: boolean;
   seoTitle?: string;
   seoDescription?: string;
 }
 
-const Hero: React.FC<HeroProps> = ({ 
-  title, 
-  subtitle, 
-  backgroundImage,
+const Hero: React.FC<HeroProps> = ({
+  title,
+  subtitle,
+  backgroundImages,
   showFeatures = false,
   seoTitle = 'SHEI – Die Casting & CNC Machining Experts in Coimbatore',
-  seoDescription = 'Offering high-quality aluminum casting, CNC machining, and sheet metal fabrication services across India.'
+  seoDescription = 'Offering high-quality aluminum casting, CNC machining, and sheet metal fabrication services across India.',
 }) => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % backgroundImages.length);
+    }, 5000); // change image every 5 seconds
+    return () => clearInterval(interval);
+  }, [backgroundImages]);
+
   return (
-    <section className="relative min-h-screen flex items-center pt-20">
+    <section className="relative min-h-screen flex items-center pt-20 transition-all duration-1000 ease-in-out">
       {/* React Helmet for SEO Meta Tags */}
       <Helmet>
         <title>{seoTitle}</title>
         <meta name="description" content={seoDescription} />
+        {backgroundImages.map((img, i) => (
+          <link key={i} rel="preload" as="image" href={img} />
+        ))}
       </Helmet>
-
-      {/* Preload background image */}
-      <link rel="preload" as="image" href={backgroundImage} />
 
       {/* Background Image Layer */}
       <div
-        className="absolute inset-0 z-0"
-        style={{
-          backgroundImage: `linear-gradient(to right, rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.7)), url(${backgroundImage})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-        }}
+        className="absolute inset-0 z-0 transition-opacity duration-1000"
+  style={{
+  backgroundImage: `linear-gradient(to right, rgba(15, 23, 42, 0.5), rgba(15, 23, 42, 0.6)), url(${backgroundImages[currentIndex]})`,
+  backgroundSize: 'cover',
+  backgroundPosition: 'center',
+}}
+
       />
 
       {/* Main Content */}
-      <div className="container relative z-10 py-20">
+      <div id="hero-container" className="container relative z-10 py-20">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           <div className="text-white">
-            {/* H1 for SEO */}
-            <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-6">
-              {title}
-            </h1>
+            <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-6">{title}</h1>
 
             {subtitle && (
               <motion.p
@@ -62,7 +69,6 @@ const Hero: React.FC<HeroProps> = ({
               </motion.p>
             )}
 
-            {/* CTA Buttons */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -79,10 +85,18 @@ const Hero: React.FC<HeroProps> = ({
               >
                 Contact Us
               </Link>
+              <button
+                onClick={() => {
+                  const el = document.getElementById('hero-container');
+                  if (el) el.scrollIntoView({ behavior: 'smooth' });
+                }}
+                className="btn btn-secondary text-white border-white hover:bg-white hover:text-primary-950"
+              >
+                Learn More
+              </button>
             </motion.div>
           </div>
 
-          {/* Optional Features Panel */}
           {showFeatures && (
             <motion.div
               initial={{ opacity: 0, x: 20 }}

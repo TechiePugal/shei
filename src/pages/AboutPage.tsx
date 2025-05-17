@@ -32,7 +32,12 @@ const AboutPage: React.FC = () => {
       <Hero 
         title="Pioneering Innovation in Metal Casting and Engineering Since Inception"
         subtitle="Learn about our journey, mission, and commitment to engineering excellence."
-        backgroundImage="https://www.supergroupscbe.com/images/super-groups-about.jpg"
+         backgroundImages={[
+    
+    "https://www.supergroupscbe.com/images/super-groups-about.jpg"
+  ]}
+  // showFeatures={true}
+        // backgroundImage="https://www.supergroupscbe.com/images/super-groups-about.jpg"
       />
       
       {/* Company Overview */}

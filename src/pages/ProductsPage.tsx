@@ -11,7 +11,6 @@ interface Product {
   image: string;
   category: string;
   title: string;
-  description: string;
   link: string;
 }
 
@@ -26,7 +25,10 @@ const ProductsPage: React.FC = () => {
       if (data) {
         const productArray: Product[] = Object.entries(data).map(([id, item]) => ({
           id,
-          ...(item as Omit<Product, 'id'>),
+          image: (item as any).image,
+          category: (item as any).category,
+          title: (item as any).title,
+          link: (item as any).link,
         }));
         setProducts(productArray);
       } else {
@@ -54,7 +56,11 @@ const ProductsPage: React.FC = () => {
       <Hero 
         title="Engineered Components Built for Performance & Reliability"
         subtitle="Discover our diverse range of precision-engineered products manufactured using advanced die casting and CNC technologies."
-        backgroundImage="https://images.pexels.com/photos/1108101/pexels-photo-1108101.jpeg"
+        backgroundImages={[
+          "https://t4.ftcdn.net/jpg/09/65/28/01/360_F_965280117_GotZl16ZRzuLxLYz1da4NgtjavTVeUnb.jpg",
+          "https://came-italy.com/wp-content/uploads/2018/11/Came-still-life.jpg"
+        ]}
+        // showFeatures={true}
       />
 
       <section className="py-20">
@@ -64,27 +70,25 @@ const ProductsPage: React.FC = () => {
             subtitle="Browse our comprehensive portfolio of precision-engineered components for various industries."
           />
 
-          {/* Chip-style Category Filter */}
-{/* Chip-style Category Filter with Mobile Scroll */}
-<div className="mt-8 mb-12 overflow-x-auto">
-  <div className="flex gap-3 px-4 sm:justify-center whitespace-nowrap w-max sm:w-auto">
-    {categories.map((category) => (
-      <button
-        key={category}
-        onClick={() => setSelectedCategory(category)}
-        className={`px-4 py-2 rounded-full border transition-all duration-300 shrink-0
-          ${
-            selectedCategory === category
-              ? 'bg-blue-600 text-white border-blue-600 shadow-md'
-              : 'bg-white text-gray-700 border-gray-300 hover:bg-blue-50'
-          }`}
-      >
-        {category}
-      </button>
-    ))}
-  </div>
-</div>
-
+          {/* Chip-style Category Filter with Mobile Scroll */}
+          <div className="mt-8 mb-12 overflow-x-auto">
+            <div className="flex gap-3 px-4 sm:justify-center whitespace-nowrap w-max sm:w-auto">
+              {categories.map((category) => (
+                <button
+                  key={category}
+                  onClick={() => setSelectedCategory(category)}
+                  className={`px-4 py-2 rounded-full border transition-all duration-300 shrink-0
+                    ${
+                      selectedCategory === category
+                        ? 'bg-blue-600 text-white border-blue-600 shadow-md'
+                        : 'bg-white text-gray-700 border-gray-300 hover:bg-blue-50'
+                    }`}
+                >
+                  {category}
+                </button>
+              ))}
+            </div>
+          </div>
 
           {/* Product Grid */}
           <div className="p-4 sm:p-8">
@@ -96,10 +100,8 @@ const ProductsPage: React.FC = () => {
                     image={product.image}
                     category={product.category}
                     title={product.title}
-                    description={product.description}
                     link={product.link}
-                    delay={index * 0.1}
-                  />
+                    delay={index * 0.1} description={''}                  />
                 ))
               ) : (
                 <p className="text-center text-gray-500 col-span-full">No products available in this category.</p>

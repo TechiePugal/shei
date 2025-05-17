@@ -56,12 +56,16 @@ useEffect(() => {
         keywords="die casting India, CNC machining Coimbatore, aluminum casting company, magnesium casting, industrial fabrication India"
       />
 
-      <Hero 
-        title="India's Leading High-Precision Die Casting & Engineering Solutions Provider"
-        subtitle="Delivering excellence in aluminum and magnesium castings, CNC machined components, and custom engineering solutions in Coimbatore, Tamil Nadu."
-        backgroundImage="https://images.pexels.com/photos/3822843/pexels-photo-3822843.jpeg"
-        showFeatures={true}
-      />
+<Hero
+  title="India's Leading High-Precision Die Casting & Engineering Solutions Provider"
+  subtitle="Delivering excellence in aluminum and magnesium castings, CNC machined components, and custom engineering solutions in Coimbatore, Tamil Nadu."
+  backgroundImages={[
+    
+    "https://www.mechdaily.com/wp-content/uploads/2025/04/what-is-Aluminum-Casting.webp",
+  ]}
+  showFeatures={true}
+/>
+
 
       {/* Services Section */}
       <section className="py-20 bg-neutral-50">
