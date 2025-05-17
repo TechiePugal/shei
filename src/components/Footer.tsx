@@ -132,8 +132,9 @@ const Footer: React.FC = () => {
             <ul className="space-y-4">
               <li className="flex">
                 <MapPin className="text-secondary-500 mr-3 flex-shrink-0" />
-                <span className="text-neutral-300">
-                  123 Industrial Estate, Coimbatore, Tamil Nadu, India - 641049
+                <span className="text-neutral-300">Sudharsan Heavy Engineering Industry<br />
+                        100/A, Athipalayam Road, Chinnavedempatti<br />
+                        Coimbatore - 641006
                 </span>
               </li>
               <li className="flex">
