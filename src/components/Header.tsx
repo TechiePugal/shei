@@ -57,7 +57,7 @@ const Header: React.FC = () => {
             { to: '/about', label: 'About' },
             { to: '/group', label: 'Groups' },
             { to: '/products', label: 'Products' },
-            { to: '/FactoryTour', label: 'FactoryTour' },
+            { to: '/FactoryTour', label: 'Factory Tour' },
           ].map(({ to, label, exact }) => (
 <NavLink
   key={to}
@@ -134,7 +134,13 @@ const Header: React.FC = () => {
               >
                 Products
               </NavLink>
-              
+              <NavLink
+                to="/FactoryTour"
+                onClick={closeMenu}
+                className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100"
+              >
+                Factory Tour
+              </NavLink>
               <Link
                 to="/contact"
                 onClick={closeMenu}

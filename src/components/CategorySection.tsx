@@ -48,52 +48,53 @@ const CategorySection: React.FC<CategorySectionProps> = ({ title, description, m
   const visibleMachines = getVisibleMachines();
 
   return (
-    <div className="mb-20">
-      <br></br>
-      <h2 className="text-2xl sm:text-3xl font-bold mb-2 text-center">{title}</h2>
-      <p className="text-center text-gray-600 mb-8">{description}</p>
+<div className="mb-16 px-4 sm:px-8">
+  <br />
+  <h2 className="text-xl sm:text-3xl font-bold mb-2 text-center">{title}</h2>
+  <p className="text-center text-gray-600 mb-6 text-sm sm:text-base">{description}</p>
 
-      <div className="flex justify-center gap-6 flex-wrap transition-all duration-500">
-        {visibleMachines.map((machine, i) => (
-          <div
-            key={i}
-            className="bg-white shadow-md rounded-lg overflow-hidden w-full sm:w-[30%] transition-transform duration-500"
-          >
-            <img
-              src={machine.image}
-              alt={machine.name}
-              className="w-full h-48 object-cover"
-            />
-            <div className="p-4">
-              <h3 className="font-semibold text-lg mb-2">{machine.name}</h3>
-              <table className="text-sm w-full border-t">
-                <tbody>
-                  {machine.specs.map(([label, value], idx) => (
-                    <tr key={idx}>
-                      <td className="py-1 pr-2 font-medium text-gray-700">{label}</td>
-                      <td className="py-1 text-gray-600">{value}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          </div>
-        ))}
+  <div className="flex justify-center gap-4 sm:gap-6 flex-wrap transition-all duration-500">
+    {visibleMachines.map((machine, i) => (
+      <div
+        key={i}
+        className="bg-white shadow-md rounded-xl overflow-hidden w-full sm:w-[30%] transition-transform duration-500"
+      >
+        <img
+          src={machine.image}
+          alt={machine.name}
+          className="w-full h-40 sm:h-48 object-cover"
+        />
+        <div className="p-4 sm:p-5">
+          <h3 className="font-semibold text-base sm:text-lg mb-2">{machine.name}</h3>
+          <table className="text-xs sm:text-sm w-full border-t">
+            <tbody>
+              {machine.specs.map(([label, value], idx) => (
+                <tr key={idx}>
+                  <td className="py-1 pr-2 font-medium text-gray-700">{label}</td>
+                  <td className="py-1 text-gray-600">{value}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       </div>
+    ))}
+  </div>
 
-      {/* Dots */}
-      <div className="flex justify-center mt-6 gap-2">
-        {Array.from({ length: Math.ceil(machines.length / visibleCards) }).map((_, i) => (
-          <button
-            key={i}
-            className={`h-3 w-3 rounded-full ${
-              index === i * visibleCards ? 'bg-blue-600' : 'bg-gray-400'
-            }`}
-            onClick={() => goToSlide(i)}
-          ></button>
-        ))}
-      </div>
-    </div>
+  {/* Dots */}
+  <div className="flex justify-center mt-6 gap-3 sm:gap-2">
+    {Array.from({ length: Math.ceil(machines.length / visibleCards) }).map((_, i) => (
+      <button
+        key={i}
+        className={`h-3 w-3 sm:h-3 sm:w-3 rounded-full focus:outline-none transition-colors duration-300 ${
+          index === i * visibleCards ? 'bg-blue-600' : 'bg-gray-400'
+        }`}
+        onClick={() => goToSlide(i)}
+      ></button>
+    ))}
+  </div>
+</div>
+
   );
 };
 

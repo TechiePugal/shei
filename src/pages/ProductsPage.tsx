@@ -4,7 +4,6 @@ import { database } from '../firebase';
 import SEO from '../components/SEO';
 import Hero from '../components/Hero';
 import SectionTitle from '../components/SectionTitle';
-import ProductCard from '../components/ProductCard';
 
 interface Product {
   id: string;
@@ -16,7 +15,6 @@ interface Product {
 
 const ProductsPage: React.FC = () => {
   const [products, setProducts] = useState<Product[]>([]);
-  const [selectedCategory, setSelectedCategory] = useState<string>('All');
 
   useEffect(() => {
     const productsRef = ref(database, 'products');
@@ -39,11 +37,14 @@ const ProductsPage: React.FC = () => {
     return () => unsubscribe();
   }, []);
 
-  const categories = ['All', ...Array.from(new Set(products.map(p => p.category)))];
-
-  const filteredProducts = selectedCategory === 'All'
-    ? products
-    : products.filter(product => product.category === selectedCategory);
+  // Group products by category
+  const groupedProducts: { [category: string]: Product[] } = {};
+  products.forEach(product => {
+    if (!groupedProducts[product.category]) {
+      groupedProducts[product.category] = [];
+    }
+    groupedProducts[product.category].push(product);
+  });
 
   return (
     <>
@@ -60,53 +61,45 @@ const ProductsPage: React.FC = () => {
           "https://t4.ftcdn.net/jpg/09/65/28/01/360_F_965280117_GotZl16ZRzuLxLYz1da4NgtjavTVeUnb.jpg",
           "https://came-italy.com/wp-content/uploads/2018/11/Came-still-life.jpg"
         ]}
-        // showFeatures={true}
       />
 
-      <section className="py-20">
-        <div className="container">
+      <section className="py-20 bg-gray-150">
+        <div className="container mx-auto  px-4">
           <SectionTitle 
             title="Our Product Range"
             subtitle="Browse our comprehensive portfolio of precision-engineered components for various industries."
           />
 
-          {/* Chip-style Category Filter with Mobile Scroll */}
-          <div className="mt-8 mb-12 overflow-x-auto">
-            <div className="flex gap-3 px-4 sm:justify-center whitespace-nowrap w-max sm:w-auto">
-              {categories.map((category) => (
-                <button
-                  key={category}
-                  onClick={() => setSelectedCategory(category)}
-                  className={`px-4 py-2 rounded-full border transition-all duration-300 shrink-0
-                    ${
-                      selectedCategory === category
-                        ? 'bg-blue-600 text-white border-blue-600 shadow-md'
-                        : 'bg-white text-gray-700 border-gray-300 hover:bg-blue-50'
-                    }`}
-                >
-                  {category}
-                </button>
-              ))}
-            </div>
-          </div>
+          <div className="space-y-16 mt-12">
+            {Object.entries(groupedProducts).map(([category, items]) => (
+              <div key={category}>
+                <h2 className="text-2xl font-semibold mb-6 border-b-2 pb-2 border-blue-600">{category}</h2>
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                  {items.map((product) => (
+<div
+  key={product.id}
+  className="border rounded-xl overflow-hidden shadow hover:shadow-lg transition-shadow duration-300"
+  style={{ backgroundColor: '#009fd1' }}
+>
+  <div className="overflow-hidden bg-white">
+    <img
+      src={product.image}
+      alt={product.title}
+      className="w-full h-56 object-cover transform hover:scale-110 transition-transform duration-300"
+    />
+  </div>
+  <div className="p-4 flex items-center justify-center h-20">
+    <h3 className="font-semibold text-base text-white text-center">{product.title}</h3>
 
-          {/* Product Grid */}
-          <div className="p-4 sm:p-8">
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-              {filteredProducts.length > 0 ? (
-                filteredProducts.map((product, index) => (
-                  <ProductCard
-                    key={product.id}
-                    image={product.image}
-                    category={product.category}
-                    title={product.title}
-                    link={product.link}
-                    delay={index * 0.1} description={''}                  />
-                ))
-              ) : (
-                <p className="text-center text-gray-500 col-span-full">No products available in this category.</p>
-              )}
-            </div>
+
+  </div>
+</div>
+
+
+                  ))}
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>

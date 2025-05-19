@@ -1,13 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  MapPin, 
-  Phone, 
-  Mail, 
-  Facebook, 
-  Instagram, 
-  Linkedin, 
-  Youtube, 
+import {
+  MapPin,
+  Phone,
+  Mail,
+  Facebook,
+  Instagram,
+  Linkedin,
+  Youtube,
   ArrowRight
 } from 'lucide-react';
 // import Logo from './Logo';
@@ -20,12 +20,12 @@ const Footer: React.FC = () => {
           {/* Company Info */}
           <div>
             <div className="bg-white inline-block p-2 rounded-md mb-4">
-            <div className="flex items-center">
-      <img
-  src={logoSHEI}
-  alt="SHEI Logo"
-  className="h-14 w-14.5 object-contain mr-2 rounded-sm"
-/></div>
+              <div className="flex items-center">
+                <img
+                  src={logoSHEI}
+                  alt="SHEI Logo"
+                  className="h-14 w-14.5 object-contain mr-2 rounded-sm"
+                /></div>
             </div>
             <p className="text-neutral-300 mb-4 text-justify">
               Leading die casting manufacturer in Coimbatore specializing in Aluminum, Magnesium, and Zinc alloy casting, CNC machining, and Fabrication.
@@ -45,7 +45,7 @@ const Footer: React.FC = () => {
               </a>
             </div>
           </div>
-          
+
           {/* Quick Links */}
           <div>
             <h4 className="text-white font-semibold mb-4 text-lg">Quick Links</h4>
@@ -74,7 +74,7 @@ const Footer: React.FC = () => {
                   Products
                 </Link>
               </li>
-               <li>
+              <li>
                 <Link to="/FactoryTour" className="text-neutral-300 hover:text-white transition-colors flex items-center">
                   <ArrowRight size={16} className="mr-2" />
                   Factory Tour
@@ -88,44 +88,44 @@ const Footer: React.FC = () => {
               </li>
             </ul>
           </div>
-          
+
           {/* Our Services */}
           <div>
             <h4 className="text-white font-semibold mb-4 text-lg">Our Services</h4>
             <ul className="space-y-2">
               <li>
-                <Link to="/products" className="text-neutral-300 hover:text-white transition-colors flex items-center">
+                <Link to="/FactoryTour" className="text-neutral-300 hover:text-white transition-colors flex items-center">
                   <ArrowRight size={16} className="mr-2" />
                   High Pressure Die Casting
                 </Link>
               </li>
               <li>
-                <Link to="/products" className="text-neutral-300 hover:text-white transition-colors flex items-center">
+                <Link to="/FactoryTour" className="text-neutral-300 hover:text-white transition-colors flex items-center">
                   <ArrowRight size={16} className="mr-2" />
                   CNC Machining
                 </Link>
               </li>
               <li>
-                <Link to="/products" className="text-neutral-300 hover:text-white transition-colors flex items-center">
+                <Link to="/FactoryTour" className="text-neutral-300 hover:text-white transition-colors flex items-center">
                   <ArrowRight size={16} className="mr-2" />
                   Sheet Metal Fabrication
                 </Link>
               </li>
               <li>
-                <Link to="/products" className="text-neutral-300 hover:text-white transition-colors flex items-center">
+                <Link to="/FactoryTour" className="text-neutral-300 hover:text-white transition-colors flex items-center">
                   <ArrowRight size={16} className="mr-2" />
                   Surface Finishing
                 </Link>
               </li>
               <li>
-                <Link to="/products" className="text-neutral-300 hover:text-white transition-colors flex items-center">
+                <Link to="/FactoryTour" className="text-neutral-300 hover:text-white transition-colors flex items-center">
                   <ArrowRight size={16} className="mr-2" />
                   Tooling Solutions
                 </Link>
               </li>
             </ul>
           </div>
-          
+
           {/* Contact Info */}
           <div>
             <h4 className="text-white font-semibold mb-4 text-lg">Contact Information</h4>
@@ -133,8 +133,8 @@ const Footer: React.FC = () => {
               <li className="flex">
                 <MapPin className="text-secondary-500 mr-3 flex-shrink-0" />
                 <span className="text-neutral-300">Sudharsan Heavy Engineering Industry<br />
-                        100/A, Athipalayam Road, Chinnavedempatti<br />
-                        Coimbatore - 641006
+                  100/A, Athipalayam Road, Chinnavedempatti<br />
+                  Coimbatore - 641006
                 </span>
               </li>
               <li className="flex">
@@ -146,15 +146,15 @@ const Footer: React.FC = () => {
               <li className="flex">
                 <Mail className="text-secondary-500 mr-3 flex-shrink-0" />
                 <a href="mailto:mailboxshei@gmail.com" className="text-neutral-300 hover:text-white transition-colors">
-                mailboxshei@gmail.com
+                  mailboxshei@gmail.com
                 </a>
               </li>
             </ul>
           </div>
         </div>
-        
+
         <hr className="border-neutral-800 my-8" />
-        
+
         <div className="flex flex-col md:flex-row justify-between items-center text-neutral-400 text-sm">
           <p>&copy; {new Date().getFullYear()} Sudharsan Heavy Engineering Industry. All Rights Reserved.</p>
           <div className="mt-4 md:mt-0">
