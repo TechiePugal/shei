@@ -2,7 +2,7 @@ import React from 'react';
 import { FaWhatsapp } from 'react-icons/fa';
 
 const FloatingWhatsApp: React.FC = () => {
-  const whatsappNumber = '6383106107';
+  const whatsappNumber = '9942909631';
   const whatsappURL = `https://wa.me/91${whatsappNumber}`;
 
   return (
