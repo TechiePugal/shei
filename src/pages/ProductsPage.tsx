@@ -58,8 +58,10 @@ const ProductsPage: React.FC = () => {
         title="Engineered Components Built for Performance & Reliability"
         subtitle="Discover our diverse range of precision-engineered products manufactured using advanced die casting and CNC technologies."
         backgroundImages={[
+          "https://www.sunrise-metal.com/wp-content/uploads/2020/07/1.-Different-type-of-Die-casting-products.jpg",
+          "https://came-italy.com/wp-content/uploads/2018/11/Came-still-life.jpg",
           "https://t4.ftcdn.net/jpg/09/65/28/01/360_F_965280117_GotZl16ZRzuLxLYz1da4NgtjavTVeUnb.jpg",
-          "https://came-italy.com/wp-content/uploads/2018/11/Came-still-life.jpg"
+          
         ]}
       />
 

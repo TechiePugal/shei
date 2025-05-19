@@ -5,7 +5,7 @@ import SEO from '../components/SEO';
 import Hero from '../components/Hero';
 import ContactForm from '../components/ContactForm';
 import FeedbackForm from '../components/FeedbackForm';
-
+import ContactImg from './contact.jpg';
 const ContactPage: React.FC = () => {
   return (
     <>
@@ -20,7 +20,7 @@ const ContactPage: React.FC = () => {
         subtitle="We're here to help you with your manufacturing and engineering needs."
         backgroundImages={[
     
-    "https://images.pexels.com/photos/1181354/pexels-photo-1181354.jpeg"
+    ContactImg
   ]}
   // showFeatures={true}
       />

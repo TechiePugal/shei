@@ -8,7 +8,7 @@ import CallToAction from '../components/CallToAction';
 import StatCard from '../components/StatCard';
 import { database, ref, onValue } from '../firebase'; // Import Firebase functions
 import TestimonialCard from '../components/TestimonialCard';
-
+import HomeImg from './home.jpg'
 // Define the feedback type with 'id' and 'status' (and any other necessary fields)
 type Feedback = {
   id: string;
@@ -60,8 +60,7 @@ useEffect(() => {
   title="India's Leading High-Precision Die Casting & Engineering Solutions Provider"
   subtitle="Delivering excellence in aluminum and magnesium castings, CNC machined components, and custom engineering solutions in Coimbatore, Tamil Nadu."
   backgroundImages={[
-    
-    "https://www.mechdaily.com/wp-content/uploads/2025/04/what-is-Aluminum-Casting.webp",
+    HomeImg
   ]}
   showFeatures={true}
 />

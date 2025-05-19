@@ -46,7 +46,7 @@ const FactoryTourPage: React.FC = () => {
             <Hero
                 title="Explore Our Manufacturing Facilities"
                 subtitle="Take a closer look at the advanced machinery and solutions we use to build excellence."
-                backgroundImages={["https://www.sunrise-metal.com/wp-content/uploads/2023/09/Figure-1-Die-Casting-Defects.jpg"]}
+                backgroundImages={[ "https://www.gutsun-die-casting.com/images/142682?stamp=1677651953","https://www.sunrise-metal.com/wp-content/uploads/2023/09/Figure-1-Die-Casting-Defects.jpg"]}
                 // showFeatures={false}
             />
 
