@@ -36,6 +36,15 @@ const ProductsPage: React.FC = () => {
 
     return () => unsubscribe();
   }, []);
+useEffect(() => {
+  const handleContextMenu = (e: MouseEvent) => {
+    e.preventDefault();
+  };
+  document.addEventListener("contextmenu", handleContextMenu);
+  return () => {
+    document.removeEventListener("contextmenu", handleContextMenu);
+  };
+}, []);
 
   // Group products by category
   const groupedProducts: { [category: string]: Product[] } = {};
@@ -48,28 +57,28 @@ const ProductsPage: React.FC = () => {
 
   return (
     <>
-      <SEO 
+      <SEO
         title="HPDC, CNC & Alloy Cast Components | SHEI Product Catalog"
         description="View SHEI's product range – precision-engineered HPDC and CNC machined parts for the automotive, textile, petroleum, and construction industries."
         keywords="HPDC components, automotive die-cast parts India, textile machine parts manufacturer"
       />
 
-      <Hero 
+      <Hero
         title="Engineered Components Built for Performance & Reliability"
         subtitle="Discover our diverse range of precision-engineered products manufactured using advanced die casting and CNC technologies."
         backgroundImages={[
           "https://www.sunrise-metal.com/wp-content/uploads/2020/07/1.-Different-type-of-Die-casting-products.jpg",
           "https://came-italy.com/wp-content/uploads/2018/11/Came-still-life.jpg",
           "https://t4.ftcdn.net/jpg/09/65/28/01/360_F_965280117_GotZl16ZRzuLxLYz1da4NgtjavTVeUnb.jpg",
-          
+
         ]}
-  hideExploreButton
-learnMoreTargetId="about-details"
+        hideExploreButton
+        learnMoreTargetId="about-details"
       />
 
       <section className="py-20 bg-gray-150" id="about-details">
         <div className="container mx-auto  px-4">
-          <SectionTitle 
+          <SectionTitle
             title="Our Product Range"
             subtitle="Browse our comprehensive portfolio of precision-engineered components for various industries."
           />
@@ -85,19 +94,25 @@ learnMoreTargetId="about-details"
   className="border rounded-xl overflow-hidden shadow hover:shadow-lg transition-shadow duration-300"
   style={{ backgroundColor: '#009fd1' }}
 >
-  <div className="overflow-hidden bg-white">
-    <img
-      src={product.image}
-      alt={product.title}
-      className="w-full h-56 object-cover transform hover:scale-110 transition-transform duration-300"
-    />
-  </div>
+  <div className="relative w-full h-56 overflow-hidden bg-white">
+  <img
+    src={product.image}
+    alt={product.title}
+    className="w-full h-full object-cover transform hover:scale-110 transition-transform duration-300"
+    draggable={false}
+  />
+  <div
+    className="absolute top-0 left-0 w-full h-full bg-transparent z-10 pointer-events-none"
+    aria-hidden="true"
+  />
+</div>
+
   <div className="p-4 flex items-center justify-center h-20">
     <h3 className="font-semibold text-base text-white text-center">{product.title}</h3>
 
 
-  </div>
-</div>
+                      </div>
+                    </div>
 
 
                   ))}
