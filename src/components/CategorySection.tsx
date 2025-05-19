@@ -29,7 +29,7 @@ const CategorySection: React.FC<CategorySectionProps> = ({ title, description, m
   useEffect(() => {
     const interval = setInterval(() => {
       setIndex((prevIndex) => (prevIndex + visibleCards) % machines.length);
-    }, 3000);
+    }, 5000);
     return () => clearInterval(interval);
   }, [visibleCards, machines.length]);
 
