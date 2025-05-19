@@ -62,12 +62,13 @@ useEffect(() => {
   backgroundImages={[
     HomeImg
   ]}
+  learnMoreTargetId="about-details"
   showFeatures={true}
 />
 
 
       {/* Services Section */}
-      <section className="py-20 bg-neutral-50">
+      <section className="py-20 bg-neutral-50" id="about-details">
         <div className="container">
           <SectionTitle 
             title="Our Core Services"

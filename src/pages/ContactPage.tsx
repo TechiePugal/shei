@@ -22,11 +22,13 @@ const ContactPage: React.FC = () => {
     
     ContactImg
   ]}
+  hideExploreButton
+learnMoreTargetId="about-details"
   // showFeatures={true}
       />
       
       
-      <section className="py-20">
+      <section className="py-20" id="about-details">
         <div className="container">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
             <div className="lg:col-span-5">

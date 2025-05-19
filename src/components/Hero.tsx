@@ -7,10 +7,12 @@ import { Helmet } from 'react-helmet';
 interface HeroProps {
   title: string;
   subtitle?: string;
-  backgroundImages: string[]; // support for multiple images
+  backgroundImages: string[];
   showFeatures?: boolean;
   seoTitle?: string;
   seoDescription?: string;
+  hideExploreButton?: boolean; // Hide Explore Products button when true
+  learnMoreTargetId?: string;  // Scroll target for Learn More button
 }
 
 const Hero: React.FC<HeroProps> = ({
@@ -20,19 +22,20 @@ const Hero: React.FC<HeroProps> = ({
   showFeatures = false,
   seoTitle = 'SHEI – Die Casting & CNC Machining Experts in Coimbatore',
   seoDescription = 'Offering high-quality aluminum casting, CNC machining, and sheet metal fabrication services across India.',
+  hideExploreButton = false,
+  learnMoreTargetId = 'hero-learn-more', // Default scroll target ID
 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % backgroundImages.length);
-    }, 5000); // change image every 5 seconds
+    }, 5000);
     return () => clearInterval(interval);
   }, [backgroundImages]);
 
   return (
     <section className="relative min-h-screen flex items-center pt-20 transition-all duration-1000 ease-in-out">
-      {/* React Helmet for SEO Meta Tags */}
       <Helmet>
         <title>{seoTitle}</title>
         <meta name="description" content={seoDescription} />
@@ -41,18 +44,15 @@ const Hero: React.FC<HeroProps> = ({
         ))}
       </Helmet>
 
-      {/* Background Image Layer */}
       <div
         className="absolute inset-0 z-0 transition-opacity duration-1000"
-  style={{
-  backgroundImage: `linear-gradient(to right, rgba(15, 23, 42, 0.5), rgba(15, 23, 42, 0.6)), url(${backgroundImages[currentIndex]})`,
-  backgroundSize: 'cover',
-  backgroundPosition: 'center',
-}}
-
+        style={{
+          backgroundImage: `linear-gradient(to right, rgba(15, 23, 42, 0.5), rgba(15, 23, 42, 0.6)), url(${backgroundImages[currentIndex]})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
       />
 
-      {/* Main Content */}
       <div id="hero-container" className="container relative z-10 py-20">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           <div className="text-white">
@@ -75,10 +75,12 @@ const Hero: React.FC<HeroProps> = ({
               transition={{ duration: 0.5, delay: 0.4 }}
               className="flex flex-wrap gap-4"
             >
-              <Link to="/products" className="btn btn-primary">
-                Explore Products
-                <ChevronRight className="ml-2 h-5 w-5" />
-              </Link>
+              {!hideExploreButton && (
+                <Link to="/products" className="btn btn-primary">
+                  Explore Products
+                  <ChevronRight className="ml-2 h-5 w-5" />
+                </Link>
+              )}
               <Link
                 to="/contact"
                 className="btn btn-outline text-white border-white hover:bg-white hover:text-primary-950"
@@ -87,7 +89,7 @@ const Hero: React.FC<HeroProps> = ({
               </Link>
               <button
                 onClick={() => {
-                  const el = document.getElementById('hero-container');
+                  const el = document.getElementById(learnMoreTargetId);
                   if (el) el.scrollIntoView({ behavior: 'smooth' });
                 }}
                 className="btn btn-secondary text-white border-white hover:bg-white hover:text-primary-950"

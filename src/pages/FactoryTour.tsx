@@ -35,401 +35,403 @@ import machineImg29 from '../pages/Assets/image29.png';
 import machineImg30 from '../pages/Assets/image30.png';
 
 const FactoryTourPage: React.FC = () => {
-    return (
-        <>
-            <SEO
-                title="Factory Facilities | SHEI"
-                description="Explore our advanced facilities categorized by Die Casting, CNC Machining, Fabrication, Surface Finishing, and Tooling."
-                keywords="High Pressure Die Casting, CNC Machining, Surface Finishing, Tooling Solutions"
-            />
+  return (
+    <>
+      <SEO
+        title="Factory Facilities | SHEI"
+        description="Explore our advanced facilities categorized by Die Casting, CNC Machining, Fabrication, Surface Finishing, and Tooling."
+        keywords="High Pressure Die Casting, CNC Machining, Surface Finishing, Tooling Solutions"
+      />
 
-            <Hero
-                title="Explore Our Manufacturing Facilities"
-                subtitle="Take a closer look at the advanced machinery and solutions we use to build excellence."
-                backgroundImages={[ "https://www.gutsun-die-casting.com/images/142682?stamp=1677651953","https://www.sunrise-metal.com/wp-content/uploads/2023/09/Figure-1-Die-Casting-Defects.jpg"]}
-                // showFeatures={false}
-            />
+      <Hero
+        title="Explore Our Manufacturing Facilities"
+        subtitle="Take a closer look at the advanced machinery and solutions we use to build excellence."
+        backgroundImages={["https://www.gutsun-die-casting.com/images/142682?stamp=1677651953"]}
+        // showFeatures={false}
+        hideExploreButton
+        learnMoreTargetId="about-details"
+      />
+      <section className="py-20 bg-gray-150" id="about-details">
+        <CategorySection
+          title="HIGH PRESSURE ALUMINUM DIE CASTING"
+          description="Top-tier die casting machinery."
+          machines={[
+            {
+              name: 'Toshiba DC 800 CL-HT',
+              image: 'https://betadiecasting.com/wp-content/uploads/2020/12/4652-16-scaled-1.jpg',
+              specs: [
+                ['Model', 'Toshiba DC800'],
+                ['Capacity', '800 Tons'],
+                ['Clamping Force', '800 metric tons (approx. 880–882 US tons)'],
+                ['Tie Bar Spacing', '930 mm × 930 mm (36.6" × 36.6")'],
+                ['Platen Size', '1400 mm × 1400 mm (55.1" × 55.1")'],
+                ['Die Height', '400 mm – 950 mm (15.7" – 37.4")'],
+                ['Clamping Stroke', '760 mm (approx. 29.9")'],
+                ['Injection Force', '25 – 70 tons'],
+                ['Injection Stroke', '680 – 700 mm'],
+                ['Ejector Force', '30 – 40 tons'],
+                ['Motor Power', '60 – 65 HP'],
+                ['Machine Weight', 'Approx. 40–43 tons'],
+                ['Control System', 'Toshiba TOSCAST or Allen Bradley PLC'],
+                ['Automation Features', 'Die height adjustment, core pull circuits, robot compatibility'],
+              ],
 
-            <CategorySection
-                title="HIGH PRESSURE ALUMINUM DIE CASTING"
-                description="Top-tier die casting machinery."
-                machines={[
-                    {
-                        name: 'Toshiba DC 800 CL-HT',
-                        image: 'https://betadiecasting.com/wp-content/uploads/2020/12/4652-16-scaled-1.jpg',
-                        specs: [
-                            ['Model', 'Toshiba DC800'],
-                            ['Capacity', '800 Tons'],
-                            ['Clamping Force', '800 metric tons (approx. 880–882 US tons)'],
-                            ['Tie Bar Spacing', '930 mm × 930 mm (36.6" × 36.6")'],
-                            ['Platen Size', '1400 mm × 1400 mm (55.1" × 55.1")'],
-                            ['Die Height', '400 mm – 950 mm (15.7" – 37.4")'],
-                            ['Clamping Stroke', '760 mm (approx. 29.9")'],
-                            ['Injection Force', '25 – 70 tons'],
-                            ['Injection Stroke', '680 – 700 mm'],
-                            ['Ejector Force', '30 – 40 tons'],
-                            ['Motor Power', '60 – 65 HP'],
-                            ['Machine Weight', 'Approx. 40–43 tons'],
-                            ['Control System', 'Toshiba TOSCAST or Allen Bradley PLC'],
-                            ['Automation Features', 'Die height adjustment, core pull circuits, robot compatibility'],
-                        ],
+            },
+            {
+              name: 'Model 400 Ton, Make HMT Pressure Die Casting',
+              image: 'https://betadiecasting.com/wp-content/uploads/2020/12/4317-01.jpg',
+              specs: [
+                ['Clamping (Locking) Force', '400 tons'],
+                ['Tie Bar Diameter', '5 inches'],
+                ['Clearance between Tie Bars (H x V)', '24 x 24 inches'],
+                ['Moving Platen Size (H x V x T)', '39 x 43.7 x 7.75 inches'],
+                ['Stationary Platen Size (H x V x T)', '39 x 42.7 x 8.25 inches'],
+                ['Die Thickness (Min–Max)', '12 – 30 inches'],
+                ['Die Stroke', '15 inches'],
+                ['Shot Cylinder Stroke', '18.5 inches'],
+                ['Rated Dry Cycles Per Hour', '375'],
+                ['Motor Power', '40 hp'],
+                ['Overall Size', '6.7 x 21.4 x 9.8 feet'],
+                ['Weight', '34,000 pounds'],
+              ],
+            },
+            {
+              name: 'Model 120 Ton, Make HMT Pressure Die Casting',
+              image: 'https://5.imimg.com/data5/SELLER/Default/2021/12/NS/DR/HB/142640260/250-pdc-machine-500x500.jpg',
+              specs: [
+                ['Machine Type', 'Pressure die casting machine'],
+                ['Material', 'HPDC'],
+                ['Material To Be Casted', 'Aluminum die casting components'],
+                ['Die Locking Force', '120 Ton'],
+                ['Power', 'Electric'],
+                ['Automation Grade', 'Semi-Automatic'],
+                ['Usage/Application', 'Industrial'],
+                ['Max Bending Radius', '50 mm'],
+                ['Maximum Temperature', '1000 °C'],
+                ['Frequency', '50 Hz'],
+                ['Phase', 'Three Phase'],
+                ['Voltage', '420 V'],
+                ['Pouring Capacity', '0.300 kg'],
+              ],
 
-                    },
-                    {
-                        name: 'Model 400 Ton, Make HMT Pressure Die Casting',
-                        image: 'https://betadiecasting.com/wp-content/uploads/2020/12/4317-01.jpg',
-                        specs: [
-                            ['Clamping (Locking) Force', '400 tons'],
-                            ['Tie Bar Diameter', '5 inches'],
-                            ['Clearance between Tie Bars (H x V)', '24 x 24 inches'],
-                            ['Moving Platen Size (H x V x T)', '39 x 43.7 x 7.75 inches'],
-                            ['Stationary Platen Size (H x V x T)', '39 x 42.7 x 8.25 inches'],
-                            ['Die Thickness (Min–Max)', '12 – 30 inches'],
-                            ['Die Stroke', '15 inches'],
-                            ['Shot Cylinder Stroke', '18.5 inches'],
-                            ['Rated Dry Cycles Per Hour', '375'],
-                            ['Motor Power', '40 hp'],
-                            ['Overall Size', '6.7 x 21.4 x 9.8 feet'],
-                            ['Weight', '34,000 pounds'],
-                        ],
-                    },
-                    {
-                        name: 'Model 120 Ton, Make HMT Pressure Die Casting',
-                        image: 'https://5.imimg.com/data5/SELLER/Default/2021/12/NS/DR/HB/142640260/250-pdc-machine-500x500.jpg',
-                        specs: [
-                            ['Machine Type', 'Pressure die casting machine'],
-                            ['Material', 'HPDC'],
-                            ['Material To Be Casted', 'Aluminum die casting components'],
-                            ['Die Locking Force', '120 Ton'],
-                            ['Power', 'Electric'],
-                            ['Automation Grade', 'Semi-Automatic'],
-                            ['Usage/Application', 'Industrial'],
-                            ['Max Bending Radius', '50 mm'],
-                            ['Maximum Temperature', '1000 °C'],
-                            ['Frequency', '50 Hz'],
-                            ['Phase', 'Three Phase'],
-                            ['Voltage', '420 V'],
-                            ['Pouring Capacity', '0.300 kg'],
-                        ],
+            },
+          ]}
+        />
 
-                    },
-                ]}
-            />
+        <CategorySection
+          title="Cubical Section Parts Machining Department (VMC/HMC)"
+          description="Precision machining of cubical section parts using advanced VMC and HMC technology for high-quality industrial components."
+          machines={[
+            {
+              name: 'Vertical Machining Centre',
+              image: machineImg1,
+              specs: [
+                ['Machine', 'Vertical Machining Centre'],
+                ['Make', 'Ace Micromatic'],
+                ['Travel Size', 'X 800 Y 450 Z 500'],
+              ],
+            },
+            {
+              name: 'Vertical Machining Centre',
+              image: machineImg2,
+              specs: [
+                ['Machine', 'Vertical Machining Centre'],
+                ['Make', 'Chevalier'],
+                ['Travel Size', 'X 660 Y 520 Z 510'],
+              ],
+            },
 
-            <CategorySection
-                title="Cubical Section Parts Machining Department (VMC/HMC)"
-                description="Precision machining of cubical section parts using advanced VMC and HMC technology for high-quality industrial components."
-                machines={[
-                    {
-                        name: 'Vertical Machining Centre',
-                        image: machineImg1,
-                        specs: [
-                            ['Machine', 'Vertical Machining Centre'],
-                            ['Make', 'Ace Micromatic'],
-                            ['Travel Size', 'X 800 Y 450 Z 500'],
-                        ],
-                    },
-                    {
-                        name: 'Vertical Machining Centre',
-                        image: machineImg2,
-                        specs: [
-                            ['Machine', 'Vertical Machining Centre'],
-                            ['Make', 'Chevalier'],
-                            ['Travel Size', 'X 660 Y 520 Z 510'],
-                        ],
-                    },
+            {
+              name: 'Vertical Machining Centre',
+              image: machineImg3,
+              specs: [
+                ['Machine', 'Vertical Machining Centre'],
+                ['Make', 'Mori Seiki'],
+                ['Travel Size', 'X 900 Y 410 Z 510'],
+              ],
+            },
 
-                    {
-                        name: 'Vertical Machining Centre',
-                        image: machineImg3,
-                        specs: [
-                            ['Machine', 'Vertical Machining Centre'],
-                            ['Make', 'Mori Seiki'],
-                            ['Travel Size', 'X 900 Y 410 Z 510'],
-                        ],
-                    },
+            {
+              name: 'Vertical Machining Centre',
+              image: machineImg4,
+              specs: [
+                ['Machine', 'Vertical Machining Centre'],
+                ['Make', 'BFW'],
+                ['Travel Size', 'X 600 Y 300 Z 350'],
+              ],
+            },
 
-                    {
-                        name: 'Vertical Machining Centre',
-                        image: machineImg4,
-                        specs: [
-                            ['Machine', 'Vertical Machining Centre'],
-                            ['Make', 'BFW'],
-                            ['Travel Size', 'X 600 Y 300 Z 350'],
-                        ],
-                    },
-
-                    {
-                        name: 'Plano Milling Punj Steel',
-                        image: machineImg5,
-                        specs: [
-                            ['Machine', 'Plano Milling Punj Steel'],
-                            ['Make', 'Punj Steel'],
-                            ['Travel Size', 'X 5000 Y 900 Z 1000'],
-                        ],
-                    },
-                    {
-                        name: 'Vertical Machining Centre',
-                        image: machineImg6,
-                        specs: [
-                            ['Machine', 'Vertical Machining Centre'],
-                            ['Make', 'KAFO'],
-                            ['Travel Size', 'X 1500 Y 650 Z 510'],
-                        ],
-                    },
-                    {
-                        name: 'Vertical Machining Centre',
-                        image: machineImg7,
-                        specs: [
-                            ['Machine', 'Vertical Machining Centre'],
-                            ['Make', 'LMW'],
-                            ['Travel Size', 'X 575 Y 430 Z 460'],
-                        ],
-                    },
-                    {
-                        name: 'Horizontal Machining Centre',
-                        image: machineImg8,
-                        specs: [
-                            ['Machine', 'Horizontal Machining Centre'],
-                            ['Make', 'Hyundai'],
-                            ['Travel Size', 'X 660 Y 510 Z 510'],
-
-
-                        ],
-                    },
-                                        {
-                        name: 'Horizontal Machining Centre',
-                        image: machineImg9,
-                        specs: [
-                            ['Machine', 'Horizontal Machining Centre'],
-                            ['Make', 'Hyundai'],
-                            ['Travel Size', 'X 660 Y 510 Z 510'],
+            {
+              name: 'Plano Milling Punj Steel',
+              image: machineImg5,
+              specs: [
+                ['Machine', 'Plano Milling Punj Steel'],
+                ['Make', 'Punj Steel'],
+                ['Travel Size', 'X 5000 Y 900 Z 1000'],
+              ],
+            },
+            {
+              name: 'Vertical Machining Centre',
+              image: machineImg6,
+              specs: [
+                ['Machine', 'Vertical Machining Centre'],
+                ['Make', 'KAFO'],
+                ['Travel Size', 'X 1500 Y 650 Z 510'],
+              ],
+            },
+            {
+              name: 'Vertical Machining Centre',
+              image: machineImg7,
+              specs: [
+                ['Machine', 'Vertical Machining Centre'],
+                ['Make', 'LMW'],
+                ['Travel Size', 'X 575 Y 430 Z 460'],
+              ],
+            },
+            {
+              name: 'Horizontal Machining Centre',
+              image: machineImg8,
+              specs: [
+                ['Machine', 'Horizontal Machining Centre'],
+                ['Make', 'Hyundai'],
+                ['Travel Size', 'X 660 Y 510 Z 510'],
 
 
-                        ],
-                    },
+              ],
+            },
+            {
+              name: 'Horizontal Machining Centre',
+              image: machineImg9,
+              specs: [
+                ['Machine', 'Horizontal Machining Centre'],
+                ['Make', 'Hyundai'],
+                ['Travel Size', 'X 660 Y 510 Z 510'],
 
 
-                ]}
-            />
-<CategorySection
-  title="Milling / Boring / Drilling Machines"
-  description="Conventional milling, boring, and drilling machines ensuring precision work on complex metal parts for various industrial applications."
-  machines={[
-    {
-      name: 'Vertical Milling',
-      image: machineImg10,
-      specs: [
-        ['Machine', 'Vertical Milling'],
-        ['Make', 'BMT'],
-        ['Travel Size', 'X 1000 Y 500 Z 510'],
-      ],
-    },
-    {
-      name: 'Horizontal Milling',
-      image: machineImg11,
-      specs: [
-        ['Machine', 'Horizontal Milling'],
-        ['Make', 'HMT'],
-        ['Travel Size', 'X 800 Y 450 Z 2400'],
-      ],
-    },
-
-    {
-      name: 'Horizontal Boring Machine',
-      image: machineImg12,
-      specs: [
-        ['Machine', 'Horizontal Boring Machine'],
-        ['Make', 'Cooper'],
-        ['Travel Size', 'X 800 Y 800 Z 1000'],
-      ],
-    },
-    {
-      name: 'Radial Drilling',
-      image: machineImg13,
-      specs: [
-        ['Machine', 'Radial Drilling'],
-        ['Make', 'HMT-RM65'],
-        ['Travel Size', 'Max Dia 65 H1000 L1500'],
-      ],
-    },
-    {
-      name: 'Vertical Boring Machine',
-      image: machineImg14,
-      specs: [
-        ['Machine', 'Vertical Boring Machine'],
-        ['Make', 'TOS Czech Republic'],
-        ['Travel Size', 'X 1200 Y 900 Z 510'],
-      ],
-    },
-  ]}
-/>
-
-<CategorySection
-  title="CNC Machines"
-  description="Precision turning operations with advanced CNC lathes for high-accuracy components across various industrial applications."
-  machines={[
-    {
-      name: 'CNC Lathe',
-      image: machineImg15,
-      specs: [
-        ['Machine', 'CNC Lathe'],
-        ['Make', 'ACE MICROMETIC OI TD'],
-        ['Travel Size', 'X 320 Z 400'],
-        ['Swing Over Bed', '500'],
-      ],
-    },
-    {
-      name: 'CNC Lathe',
-      image: machineImg16,
-      specs: [
-        ['Machine', 'CNC Lathe'],
-        ['Make', 'ACE MICROMETIC OI TF'],
-        ['Travel Size', 'X 320 Z 400'],
-        ['Swing Over Bed', '500'],
-      ],
-    },
-    {
-      name: 'CNC Lathe',
-      image: machineImg17,
-      specs: [
-        ['Machine', 'PUMA 10 HC DAEWOO'],
-        ['Make', 'DAEWOO'],
-        ['Travel Size', 'X 370 Z 530'],
-        ['Swing Over Bed', '500'],
-      ],
-    },
-    {
-      name: 'CNC Lathe',
-      image: machineImg18,
-      specs: [
-        ['Machine', 'CNC Lathe 4'],
-        ['Make', 'MORI SEIKI CL 1500'],
-        ['Travel Size', 'X 220 Z 300'],
-        ['Swing Over Bed', '450'],
-      ],
-    },
-    {
-      name: 'CNC Lathe',
-      image: machineImg19,
-      specs: [
-        ['Machine', 'CNC Lathe'],
-        ['Make', 'FEMCO DURGA 25 E'],
-        ['Travel Size', 'X 320 Z 400'],
-        ['Swing Over Bed', '500'],
-      ],
-    },
-    {
-      name: 'CNC Lathe',
-      image: machineImg20,
-      specs: [
-        ['Machine', 'CNC Lathe'],
-        ['Make', 'GEDEE WEILER ECOTURN'],
-        ['Travel Size', 'X 160.5 Z 78.5'],
-        ['Swing Over Bed', '380'],
-      ],
-    },
-  ]}
-/>
-
-<CategorySection
-  title="Advanced Precision Machines"
-  description="Showcasing high-capacity and precision equipment designed for complex and heavy-duty machining tasks."
-  machines={[
-    {
-      name: 'Hobbing Machine',
-      image: machineImg21,
-      specs: [
-        ['Machine', 'Hobbing M/C'],
-        ['Make', 'PIECO 24'],
-        ['Capacity', 'Max Dia 420, Max 3 Module'],
-      ],
-    },
-    {
-      name: 'Hobbing Machine',
-      image: machineImg22,
-      specs: [
-        ['Machine', 'Hobbing M/C'],
-        ['Make', 'EIFCO HM/6'],
-        ['Capacity', 'Max Dia 420, Max 3 Module'],
-      ],
-    },
-    {
-      name: 'Conventional Lathe Capstan',
-      image: machineImg23,
-      specs: [
-        ['Machine', 'Conventional Lathe MK4 Capstan'],
-        ['Make', 'Kirloskar'],
-        ['Capacity', 'Max Dia 500, Length 1000'],
-      ],
-    },
-    {
-      name: 'Dynamic Balancing Machine',
-      image: machineImg24,
-      specs: [
-        ['Machine', 'Balancing M/C'],
-        ['Make', 'RHE-50'],
-        ['Capacity', 'Max Dia 450, Weight 45 KG'],
-      ],
-    },
-    {
-      name: 'Cylindrical Grinding',
-      image: machineImg25,
-      specs: [
-        ['Machine', 'Cylindrical Grinding'],
-        ['Make', 'TMT'],
-        ['Capacity', '800'],
-      ],
-    },
-    {
-      name: 'Cylindrical Grinding',
-      image: machineImg26,
-      specs: [
-        ['Machine', 'Cylindrical Grinding'],
-        ['Make', 'MORARA'],
-        ['Capacity', '5309'],
-      ],
-    },
-    {
-      name: 'Cylindrical Grinding',
-      image: machineImg27,
-      specs: [
-        ['Machine', 'Cylindrical Grinding'],
-        ['Make', 'WMW SU-315'],
-        ['Capacity', '1500'],
-      ],
-    },
-    {
-      name: 'Internal Grinding',
-      image: machineImg28,
-      specs: [
-        ['Machine', 'Internal Grinding'],
-        ['Make', 'JOTES SOC 100'],
-      ],
-    },
-    {
-      name: 'Thread Rolling Machine',
-      image: machineImg29,
-      specs: [
-        ['Machine', 'Thread Rolling'],
-        ['Make', 'MTE M.T.R-15'],
-      ],
-    },
-    {
-      name: 'Milling Machine (Auto)',
-      image: machineImg30,
-      specs: [
-        ['Machine', 'Milling Machine (Auto)'],
-        ['Make', 'A.U.W BUSCH NF1'],
-      ],
-    },
-  ]}
-/>
+              ],
+            },
 
 
+          ]}
+        />
+        <CategorySection
+          title="Milling / Boring / Drilling Machines"
+          description="Conventional milling, boring, and drilling machines ensuring precision work on complex metal parts for various industrial applications."
+          machines={[
+            {
+              name: 'Vertical Milling',
+              image: machineImg10,
+              specs: [
+                ['Machine', 'Vertical Milling'],
+                ['Make', 'BMT'],
+                ['Travel Size', 'X 1000 Y 500 Z 510'],
+              ],
+            },
+            {
+              name: 'Horizontal Milling',
+              image: machineImg11,
+              specs: [
+                ['Machine', 'Horizontal Milling'],
+                ['Make', 'HMT'],
+                ['Travel Size', 'X 800 Y 450 Z 2400'],
+              ],
+            },
 
-        </>
-    );
+            {
+              name: 'Horizontal Boring Machine',
+              image: machineImg12,
+              specs: [
+                ['Machine', 'Horizontal Boring Machine'],
+                ['Make', 'Cooper'],
+                ['Travel Size', 'X 800 Y 800 Z 1000'],
+              ],
+            },
+            {
+              name: 'Radial Drilling',
+              image: machineImg13,
+              specs: [
+                ['Machine', 'Radial Drilling'],
+                ['Make', 'HMT-RM65'],
+                ['Travel Size', 'Max Dia 65 H1000 L1500'],
+              ],
+            },
+            {
+              name: 'Vertical Boring Machine',
+              image: machineImg14,
+              specs: [
+                ['Machine', 'Vertical Boring Machine'],
+                ['Make', 'TOS Czech Republic'],
+                ['Travel Size', 'X 1200 Y 900 Z 510'],
+              ],
+            },
+          ]}
+        />
+
+        <CategorySection
+          title="CNC Machines"
+          description="Precision turning operations with advanced CNC lathes for high-accuracy components across various industrial applications."
+          machines={[
+            {
+              name: 'CNC Lathe',
+              image: machineImg15,
+              specs: [
+                ['Machine', 'CNC Lathe'],
+                ['Make', 'ACE MICROMETIC OI TD'],
+                ['Travel Size', 'X 320 Z 400'],
+                ['Swing Over Bed', '500'],
+              ],
+            },
+            {
+              name: 'CNC Lathe',
+              image: machineImg16,
+              specs: [
+                ['Machine', 'CNC Lathe'],
+                ['Make', 'ACE MICROMETIC OI TF'],
+                ['Travel Size', 'X 320 Z 400'],
+                ['Swing Over Bed', '500'],
+              ],
+            },
+            {
+              name: 'CNC Lathe',
+              image: machineImg17,
+              specs: [
+                ['Machine', 'PUMA 10 HC DAEWOO'],
+                ['Make', 'DAEWOO'],
+                ['Travel Size', 'X 370 Z 530'],
+                ['Swing Over Bed', '500'],
+              ],
+            },
+            {
+              name: 'CNC Lathe',
+              image: machineImg18,
+              specs: [
+                ['Machine', 'CNC Lathe 4'],
+                ['Make', 'MORI SEIKI CL 1500'],
+                ['Travel Size', 'X 220 Z 300'],
+                ['Swing Over Bed', '450'],
+              ],
+            },
+            {
+              name: 'CNC Lathe',
+              image: machineImg19,
+              specs: [
+                ['Machine', 'CNC Lathe'],
+                ['Make', 'FEMCO DURGA 25 E'],
+                ['Travel Size', 'X 320 Z 400'],
+                ['Swing Over Bed', '500'],
+              ],
+            },
+            {
+              name: 'CNC Lathe',
+              image: machineImg20,
+              specs: [
+                ['Machine', 'CNC Lathe'],
+                ['Make', 'GEDEE WEILER ECOTURN'],
+                ['Travel Size', 'X 160.5 Z 78.5'],
+                ['Swing Over Bed', '380'],
+              ],
+            },
+          ]}
+        />
+
+        <CategorySection
+          title="Advanced Precision Machines"
+          description="Showcasing high-capacity and precision equipment designed for complex and heavy-duty machining tasks."
+          machines={[
+            {
+              name: 'Hobbing Machine',
+              image: machineImg21,
+              specs: [
+                ['Machine', 'Hobbing M/C'],
+                ['Make', 'PIECO 24'],
+                ['Capacity', 'Max Dia 420, Max 3 Module'],
+              ],
+            },
+            {
+              name: 'Hobbing Machine',
+              image: machineImg22,
+              specs: [
+                ['Machine', 'Hobbing M/C'],
+                ['Make', 'EIFCO HM/6'],
+                ['Capacity', 'Max Dia 420, Max 3 Module'],
+              ],
+            },
+            {
+              name: 'Conventional Lathe Capstan',
+              image: machineImg23,
+              specs: [
+                ['Machine', 'Conventional Lathe MK4 Capstan'],
+                ['Make', 'Kirloskar'],
+                ['Capacity', 'Max Dia 500, Length 1000'],
+              ],
+            },
+            {
+              name: 'Dynamic Balancing Machine',
+              image: machineImg24,
+              specs: [
+                ['Machine', 'Balancing M/C'],
+                ['Make', 'RHE-50'],
+                ['Capacity', 'Max Dia 450, Weight 45 KG'],
+              ],
+            },
+            {
+              name: 'Cylindrical Grinding',
+              image: machineImg25,
+              specs: [
+                ['Machine', 'Cylindrical Grinding'],
+                ['Make', 'TMT'],
+                ['Capacity', '800'],
+              ],
+            },
+            {
+              name: 'Cylindrical Grinding',
+              image: machineImg26,
+              specs: [
+                ['Machine', 'Cylindrical Grinding'],
+                ['Make', 'MORARA'],
+                ['Capacity', '5309'],
+              ],
+            },
+            {
+              name: 'Cylindrical Grinding',
+              image: machineImg27,
+              specs: [
+                ['Machine', 'Cylindrical Grinding'],
+                ['Make', 'WMW SU-315'],
+                ['Capacity', '1500'],
+              ],
+            },
+            {
+              name: 'Internal Grinding',
+              image: machineImg28,
+              specs: [
+                ['Machine', 'Internal Grinding'],
+                ['Make', 'JOTES SOC 100'],
+              ],
+            },
+            {
+              name: 'Thread Rolling Machine',
+              image: machineImg29,
+              specs: [
+                ['Machine', 'Thread Rolling'],
+                ['Make', 'MTE M.T.R-15'],
+              ],
+            },
+            {
+              name: 'Milling Machine (Auto)',
+              image: machineImg30,
+              specs: [
+                ['Machine', 'Milling Machine (Auto)'],
+                ['Make', 'A.U.W BUSCH NF1'],
+              ],
+            },
+          ]}
+        />
+      </section>
+
+
+    </>
+  );
 };
 
 export default FactoryTourPage;

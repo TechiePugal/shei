@@ -63,9 +63,11 @@ const ProductsPage: React.FC = () => {
           "https://t4.ftcdn.net/jpg/09/65/28/01/360_F_965280117_GotZl16ZRzuLxLYz1da4NgtjavTVeUnb.jpg",
           
         ]}
+  hideExploreButton
+learnMoreTargetId="about-details"
       />
 
-      <section className="py-20 bg-gray-150">
+      <section className="py-20 bg-gray-150" id="about-details">
         <div className="container mx-auto  px-4">
           <SectionTitle 
             title="Our Product Range"

@@ -34,11 +34,13 @@ const GroupPage: React.FC = () => {
     
     "https://png.pngtree.com/thumb_back/fh260/background/20240604/pngtree-cnc-machine-working-with-workpiece-on-smart-factory-image_15739298.jpg"
   ]}
+  hideExploreButton
+learnMoreTargetId="about-details"
   // showFeatures={true}
              />
       
       {/* Group Overview */}
-      <section className="py-20 text-justify">
+      <section className="py-20 text-justify" id="about-details">
         <div className="container">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
             <motion.div 

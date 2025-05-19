@@ -36,12 +36,15 @@ const AboutPage: React.FC = () => {
     
     "https://www.supergroupscbe.com/images/super-groups-about.jpg"
   ]}
+  learnMoreTargetId="about-details"
+  hideExploreButton
+  
   // showFeatures={true}
         // backgroundImage="https://www.supergroupscbe.com/images/super-groups-about.jpg"
       />
       
       {/* Company Overview */}
-      <section className="py-20">
+      <section className="py-20" id="about-details">
         <div className="container">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center text-justify">
             <MotionCard direction="x" delay={0}>
