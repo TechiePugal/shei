@@ -81,28 +81,28 @@ useEffect(() => {
                 icon={<FactoryIcon size={32} />}
                 title="High Pressure Die Casting"
                 description="Precision HPDC components with tight tolerances and excellent surface finish for automotive and industrial applications."
-                link="/products"
+                link="/FactoryTour"
                 delay={0.1}
               />
               <ServiceCard 
                 icon={<Wrench size={32} />}
                 title="CNC / VMC / HMC Machining"
                 description="Advanced multi-axis machining capabilities for complex components with precision and repeatability."
-                link="/products"
+                link="/FactoryTour"
                 delay={0.2}
               />
               <ServiceCard 
                 icon={<Layers size={32} />}
                 title="Sheet Metal Fabrication"
                 description="Custom sheet metal components with cutting, bending, welding, and assembly services for various industries."
-                link="/products"
+                link="/FactoryTour"
                 delay={0.3}
               />
               <ServiceCard 
                 icon={<Settings size={32} />}
                 title="Tooling & Surface Finishing"
                 description="In-house tool design and fabrication along with comprehensive surface treatment solutions."
-                link="/products"
+                link="/FactoryTour"
                 delay={0.4}
               />
             </Suspense>
