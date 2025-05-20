@@ -17,7 +17,8 @@ import SEO from '../components/SEO';
 import Hero from '../components/Hero';
 import SectionTitle from '../components/SectionTitle';
 import CallToAction from '../components/CallToAction';
-
+import MDImg from './MD.png';
+import JMDImg from './JMD.png';
 const GroupPage: React.FC = () => {
   return (
     <>
@@ -226,7 +227,7 @@ learnMoreTargetId="about-details"
             >
               <div className="w-48 h-48 mx-auto rounded-full overflow-hidden mb-4">
                 <img 
-                  src="https://images.pexels.com/photos/3785104/pexels-photo-3785104.jpeg" 
+                  src= {MDImg} 
                   alt="A. Thankavel" 
                   className="w-full h-full object-cover"
                 />
@@ -236,13 +237,13 @@ learnMoreTargetId="about-details"
               <p className="text-neutral-600 mb-4">
                 Visionary leader with over 30 years of experience in manufacturing and engineering.
               </p>
-              <a 
+              {/* <a 
                 href="https://linkedin.com" 
                 className="inline-flex items-center text-primary-600 hover:text-primary-700 transition-colors"
               >
                 <LinkedinIcon className="h-5 w-5 mr-2" />
                 LinkedIn Profile
-              </a>
+              </a> */}
             </motion.div>
             
             <motion.div
@@ -254,7 +255,7 @@ learnMoreTargetId="about-details"
             >
               <div className="w-48 h-48 mx-auto rounded-full overflow-hidden mb-4">
                 <img 
-                  src="https://images.pexels.com/photos/3785104/pexels-photo-3785104.jpeg" 
+                  src={JMDImg}
                   alt="Priya Thankavel" 
                   className="w-full h-full object-cover"
                 />
@@ -264,13 +265,13 @@ learnMoreTargetId="about-details"
               <p className="text-neutral-600 mb-4">
                 Strategic leader with expertise in operations management and business development.
               </p>
-              <a 
+              {/* <a 
                 href="https://linkedin.com" 
                 className="inline-flex items-center text-primary-600 hover:text-primary-700 transition-colors"
               >
                 <LinkedinIcon className="h-5 w-5 mr-2" />
                 LinkedIn Profile
-              </a>
+              </a> */}
             </motion.div>
 
           </div>
