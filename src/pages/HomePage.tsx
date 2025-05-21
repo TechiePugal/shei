@@ -209,7 +209,7 @@ const HomePage: React.FC = () => {
         primaryButtonText="Request a Quote"
         primaryButtonLink="/contact"
         secondaryButtonText="Download Brochure"
-        secondaryButtonLink="/brochure"
+        secondaryButtonLink="https://drive.google.com/file/d/1zCY3s4YnABDA9aEBU6pBzf7JWXYV6Wlj/view?usp=sharing"
         backgroundImage="https://images.pexels.com/photos/2760243/pexels-photo-2760243.jpeg"
       />
     </>
