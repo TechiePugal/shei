@@ -161,7 +161,7 @@ learnMoreTargetId="about-details"
   <div className="w-full md:w-1/2 rounded-lg overflow-hidden shadow-lg">
     <h2 className="text-center text-xl font-semibold mb-4">Head Office</h2>
     <iframe
-      src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d31326.079044839957!2d76.982782!3d11.056621!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba85875f5da5219%3A0xf0d8694e6c43d621!2sSUPER%20MACHINE%20WORKS%20(P)%20LTD!5e0!3m2!1sen!2sin!4v1714193586373!5m2!1sen!2sin"
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3915.866153580972!2d76.9841977!3d11.0486604!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba8590073e1cd03%3A0xe209a99ef3c72493!2sSudharsan%20heavy%20engineering%20industry!5e0!3m2!1sen!2sin!4v1747820866670!5m2!1sen!2sin"
       width="100%"
       height="450"
       style={{ border: 0 }}
