@@ -52,71 +52,77 @@ const FactoryTourPage: React.FC = () => {
         learnMoreTargetId="about-details"
       />
       <section className="py-20 bg-gray-150" id="about-details">
-        <CategorySection
-          title="HIGH PRESSURE ALUMINUM DIE CASTING"
-          description="Top-tier die casting machinery."
-          machines={[
-            {
-              name: 'Toshiba DC 800 CL-HT',
-              image: 'https://betadiecasting.com/wp-content/uploads/2020/12/4652-16-scaled-1.jpg',
-              specs: [
-                ['Model', 'Toshiba DC800'],
-                ['Capacity', '800 Tons'],
-                ['Clamping Force', '800 metric tons (approx. 880–882 US tons)'],
-                ['Tie Bar Spacing', '930 mm × 930 mm (36.6" × 36.6")'],
-                ['Platen Size', '1400 mm × 1400 mm (55.1" × 55.1")'],
-                ['Die Height', '400 mm – 950 mm (15.7" – 37.4")'],
-                ['Clamping Stroke', '760 mm (approx. 29.9")'],
-                ['Injection Force', '25 – 70 tons'],
-                ['Injection Stroke', '680 – 700 mm'],
-                ['Ejector Force', '30 – 40 tons'],
-                ['Motor Power', '60 – 65 HP'],
-                ['Machine Weight', 'Approx. 40–43 tons'],
-                ['Control System', 'Toshiba TOSCAST or Allen Bradley PLC'],
-                ['Automation Features', 'Die height adjustment, core pull circuits, robot compatibility'],
-              ],
+<CategorySection
+  title="HIGH PRESSURE ALUMINUM DIE CASTING"
+  description="Top-tier die casting machinery."
+  machines={[
+    {
+      name: 'Toshiba DC 800 CL-HT',
+      image: 'https://betadiecasting.com/wp-content/uploads/2020/12/4652-16-scaled-1.jpg',
+      specs: [
+        ['Model', 'Toshiba DC800'],
+        ['Capacity', '800 Tons'],
+        ['Clamping Force', '800 metric tons (approx. 880–882 US tons)'],
+        ['Tie Bar Spacing', '930 mm × 930 mm (36.6" × 36.6")'],
+        ['Platen Size', '1400 mm × 1400 mm (55.1" × 55.1")'],
+        ['Die Height', '400 mm – 950 mm (15.7" – 37.4")'],
+        ['Clamping Stroke', '760 mm (approx. 29.9")'],
+        ['Injection Force', '25 – 70 tons'],
+        ['Injection Stroke', '680 – 700 mm'],
+        ['Ejector Force', '30 – 40 tons'],
+        ['Motor Power', '60 – 65 HP'],
+        ['Machine Weight', 'Approx. 40–43 tons'],
+        ['Control System', 'Toshiba TOSCAST or Allen Bradley PLC'],
+        ['Automation Features', 'Die height adjustment, core pull circuits, robot compatibility'],
+      ],
+    },
+    {
+      name: 'Model H-400D, Make HMT Pressure Die Casting',
+      image: 'https://betadiecasting.com/wp-content/uploads/2020/12/4317-01.jpg',
+      specs: [
+        ['Clamping (Locking) Force', '400 tons'],
+        ['Injection Force (Adjustable)', '38.5 tons'],
+        ['Hydraulic Ejection Force', '22 tons'],
+        ['Tie Bar Diameter', '120 mm'],
+        ['Space Between Tie Bars (H x V)', '580 mm x 640 mm'],
+        ['Die Mounting Plate Size (H x V)', '920 mm x 980 mm'],
+        ['Max Die Height', '750 mm'],
+        ['Min Die Height', '200 mm'],
+        ['Die Opening Stroke', '600 mm'],
+        ['Injection Plunger Stroke', '400 mm'],
+        ['Ejector Stroke (Adjustable)', '145 mm'],
+        ['Free Cycle Time', '7 sec'],
+        ['Motor Capacity', '22.4 KW'],
+        ['Machine Area', '6.1 m x 1.65 m'],
+        ['Machine Weight', 'Approx. 12.5 tons'],
+        ['Oil Tank Capacity', '550 litres'],
+      ],
+    },
+    {
+      name: 'Model DC120, Make HMT Pressure Die Casting',
+      image: 'https://5.imimg.com/data5/SELLER/Default/2021/12/NS/DR/HB/142640260/250-pdc-machine-500x500.jpg',
+      specs: [
+        ['Clamping (Locking) Force', '120 tons'],
+        ['Injection Force (Adjustable)', '13 tons'],
+        ['Hydraulic Ejection Force', '6 tons'],
+        ['Tie Bar Diameter', '65 mm'],
+        ['Space Between Tie Bars (H x V)', '380 mm x 410 mm'],
+        ['Die Mounting Plate Size (H x V)', '555 mm x 600 mm'],
+        ['Max Die Height', '450 mm'],
+        ['Min Die Height', '150 mm'],
+        ['Die Opening Stroke', '375 mm'],
+        ['Injection Plunger Stroke', '275 mm'],
+        ['Ejector Stroke (Adjustable)', '65 mm'],
+        ['Free Cycle Time', '3.2 sec'],
+        ['Motor Capacity', '11 KW'],
+        ['Machine Area', '4.1 m x 1.25 m'],
+        ['Machine Weight', 'Approx. 4 tons'],
+        ['Oil Tank Capacity', '350 litres'],
+      ],
+    },
+  ]}
+/>
 
-            },
-            {
-              name: 'Model 400 Ton, Make HMT Pressure Die Casting',
-              image: 'https://betadiecasting.com/wp-content/uploads/2020/12/4317-01.jpg',
-              specs: [
-                ['Clamping (Locking) Force', '400 tons'],
-                ['Tie Bar Diameter', '5 inches'],
-                ['Clearance between Tie Bars (H x V)', '24 x 24 inches'],
-                ['Moving Platen Size (H x V x T)', '39 x 43.7 x 7.75 inches'],
-                ['Stationary Platen Size (H x V x T)', '39 x 42.7 x 8.25 inches'],
-                ['Die Thickness (Min–Max)', '12 – 30 inches'],
-                ['Die Stroke', '15 inches'],
-                ['Shot Cylinder Stroke', '18.5 inches'],
-                ['Rated Dry Cycles Per Hour', '375'],
-                ['Motor Power', '40 hp'],
-                ['Overall Size', '6.7 x 21.4 x 9.8 feet'],
-                ['Weight', '34,000 pounds'],
-              ],
-            },
-            {
-              name: 'Model 120 Ton, Make HMT Pressure Die Casting',
-              image: 'https://5.imimg.com/data5/SELLER/Default/2021/12/NS/DR/HB/142640260/250-pdc-machine-500x500.jpg',
-              specs: [
-                ['Machine Type', 'Pressure die casting machine'],
-                ['Material', 'HPDC'],
-                ['Material To Be Casted', 'Aluminum die casting components'],
-                ['Die Locking Force', '120 Ton'],
-                ['Power', 'Electric'],
-                ['Automation Grade', 'Semi-Automatic'],
-                ['Usage/Application', 'Industrial'],
-                ['Max Bending Radius', '50 mm'],
-                ['Maximum Temperature', '1000 °C'],
-                ['Frequency', '50 Hz'],
-                ['Phase', 'Three Phase'],
-                ['Voltage', '420 V'],
-                ['Pouring Capacity', '0.300 kg'],
-              ],
-
-            },
-          ]}
-        />
 
         <CategorySection
           title="Cubical Section Parts Machining Department (VMC/HMC)"
